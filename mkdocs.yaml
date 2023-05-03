@@ -5,7 +5,7 @@ docs_dir: docs/
 repo_name: guescinr/vivo-project-ontology
 repo_url: https://github.com/guescinr/vivo-project-ontology
 nav:
-  - BUA UPPER ONTOLOGY: index.md
+  - VIVO PROJECT ONTOLOGY: index.md
   - COMPETENCY QUESTIONS: cq.md
 theme:
   name: material
