@@ -1,13 +1,11 @@
 # PURL configuration for http://purl.obolibrary.org/obo/vivoprojectontology
 
 idspace: VIVOPROJECTONTOLOGY
-base_url: /obo/vivoprojectontology
+base_url: /vivoprojectontology
 
 products:
 - vivoprojectontology.owl: https://raw.githubusercontent.com/guescinr/vivo-project-ontology/main/vivoprojectontology.owl
-- vivoprojectontology.obo: https://raw.githubusercontent.com/guescinr/vivo-project-ontology/main/vivoprojectontology.obo
 
-term_browser: ontobee
 example_terms:
 - VIVOPROJECTONTOLOGY_0000000
 
@@ -20,7 +18,7 @@ entries:
   replacement: https://github.com/guescinr/vivo-project-ontology/issues
 
 - prefix: /about/
-  replacement: http://www.ontobee.org/ontology/VIVOPROJECTONTOLOGY?iri=http://purl.obolibrary.org/obo/
+  replacement: https://github.com/guescinr/vivo-project-ontology/README.md
 
 ## generic fall-through, serve direct from github by default
 - prefix: /

@@ -1,0 +1,11 @@
+site_name: VIVO Project Ontology
+site_description: This document is part of the vivo ontology project entity extension development process
+site_author: Rolf Guescini
+docs_dir: docs/
+repo_name: guescinr/vivo-project-ontology
+repo_url: https://github.com/guescinr/vivo-project-ontology
+nav:
+  - BUA UPPER ONTOLOGY: index.md
+  - COMPETENCY QUESTIONS: cq.md
+theme:
+  name: material
