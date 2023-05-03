@@ -1,0 +1,17 @@
+id: vivoprojectontology
+title: VIVO Project ontology
+github_org: guescinr
+git_main_branch: main
+repo: vivo-project-ontology
+uribase: "http://vivoweb.org/ontology/core/de/project/"
+base_iris:
+    - "http://vivoweb.org/ontology/core/de/project/"
+release_artefacts:
+    - base
+    - full
+    - simple
+primary_release: full
+export_formats:
+    - owl
+    - ttl
+robot_java_args: '-Xmx8G'
