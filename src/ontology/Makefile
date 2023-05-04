@@ -15,7 +15,7 @@
 # ----------------------------------------
 # these can be overwritten on the command line
 
-URIBASE=                    http://vivoweb.org/ontology/core/de/project/
+URIBASE=                    http://vivoweb.org/ontology/core#
 ONT=                        vivoprojectontology
 ONTBASE=                    $(URIBASE)/$(ONT)
 EDIT_FORMAT=                owl

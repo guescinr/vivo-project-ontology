@@ -1,18 +1,25 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://vivoweb.org/ontology/core/de/project//vivoprojectontology.owl#"
-     xml:base="http://vivoweb.org/ontology/core/de/project//vivoprojectontology.owl"
+<rdf:RDF xmlns="http://vivoweb.org/ontology/core/vivoprojectontology.owl#"
+     xml:base="http://vivoweb.org/ontology/core/vivoprojectontology.owl"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:terms="http://purl.org/dc/terms/">
-    <owl:Ontology rdf:about="http://vivoweb.org/ontology/core/de/project//vivoprojectontology.owl">
-        <owl:versionIRI rdf:resource="http://vivoweb.org/ontology/core/de/project//vivoprojectontology/releases/2023-05-03/vivoprojectontology.owl"/>
-        <terms:description>None</terms:description>
-        <terms:license rdf:resource="https://creativecommons.org/licenses/unspecified"/>
-        <terms:title>VIVO Project ontology</terms:title>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-05-03</owl:versionInfo>
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:vitro="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#">
+    <owl:Ontology rdf:about="http://vivoweb.org/ontology/core/vivoprojectontology.owl">
+        <owl:versionIRI rdf:resource="http://vivoweb.org/ontology/core/vivoprojectontology/releases/2023-05-04/vivoprojectontology.owl"/>
+        <terms:description xml:lang="de-de">Diese Ontologie beschreibt die Projektentität und ihre Eigenschaften und Beschränkungen für die Verwendung in der VIVO-Anwendung</terms:description>
+        <terms:description xml:lang="en-us">This ontology describes the project entity and its properties and restraints for use in the VIVO application</terms:description>
+        <terms:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <terms:title xml:lang="de-de"></terms:title>
+        <terms:title xml:lang="en-us">VIVO Project ontology</terms:title>
+        <rdfs:label xml:lang="en-us">VIVO Project Ontology</rdfs:label>
+        <rdfs:label xml:lang="de-de">VIVO Projektontologie</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-05-04</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -25,6 +32,18 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000112 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000112"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
     
 
 
@@ -52,6 +71,728 @@
     
 
 
+    <!-- http://vitro.mannlib.cornell.edu/ns/vitro/0.7#descriptionAnnot -->
+
+    <owl:AnnotationProperty rdf:about="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#descriptionAnnot"/>
+    
+
+
+    <!-- http://vitro.mannlib.cornell.edu/ns/vitro/0.7#displayRankAnnot -->
+
+    <owl:AnnotationProperty rdf:about="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#displayRankAnnot"/>
+    
+
+
+    <!-- http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot -->
+
+    <owl:AnnotationProperty rdf:about="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot"/>
+    
+
+
+    <!-- http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot -->
+
+    <owl:AnnotationProperty rdf:about="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot"/>
+    
+
+
+    <!-- http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup -->
+
+    <owl:AnnotationProperty rdf:about="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup"/>
+    
+
+
+    <!-- http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot -->
+
+    <owl:AnnotationProperty rdf:about="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot"/>
+    
+
+
+    <!-- http://vitro.mannlib.cornell.edu/ns/vitro/0.7#offerCreateNewOptionAnnot -->
+
+    <owl:AnnotationProperty rdf:about="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#offerCreateNewOptionAnnot"/>
+    
+
+
+    <!-- http://vitro.mannlib.cornell.edu/ns/vitro/0.7#ontologyPrefixAnnot -->
+
+    <owl:AnnotationProperty rdf:about="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#ontologyPrefixAnnot"/>
+    
+
+
+    <!-- http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot -->
+
+    <owl:AnnotationProperty rdf:about="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot"/>
+    
+
+
+    <!-- http://vitro.mannlib.cornell.edu/ns/vitro/0.7#publicDescriptionAnnot -->
+
+    <owl:AnnotationProperty rdf:about="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#publicDescriptionAnnot"/>
+    
+
+
+    <!-- http://vitro.mannlib.cornell.edu/ns/vitro/0.7#selectFromExistingAnnot -->
+
+    <owl:AnnotationProperty rdf:about="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#selectFromExistingAnnot"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#maxCardinality -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#maxCardinality"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ARG_2000028 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/ARG_2000028"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000050 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000050"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000051 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000051"/>
+    
+
+
+    <!-- http://purl.org/spar/cito/cites -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/spar/cito/cites"/>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000014 -->
+
+    <owl:ObjectProperty rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000014">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/roh#correspondingAuthor"/>
+        <owl:inverseOf rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000015"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <obo:IAO_0000115 xml:lang="en-us">An object property linking an Entity to a Person, considered the author of such Thing.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="de-de">Eine Objekteigenschaft, die eine Entität mit einer Person verbindet, die als Urheber dieser Sache gilt</obo:IAO_0000115>
+        <rdfs:label xml:lang="en-us">corresponding author</rdfs:label>
+        <rdfs:label xml:lang="de-de">entsprechender Autor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000015 -->
+
+    <owl:ObjectProperty rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000015">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/roh#correspondingAuthorOf"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <obo:IAO_0000115 xml:lang="en-us">An object property linking a Person with a Thing, such person is corresponding author for.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="de-de">Eine Objekteigenschaft, die eine Person mit einer Sache verknüpft, diese Person ist der entsprechende Autor für</obo:IAO_0000115>
+        <rdfs:label xml:lang="en-us">corresponding author of</rdfs:label>
+        <rdfs:label xml:lang="de-de">entsprechender Autor von</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000016 -->
+
+    <owl:ObjectProperty rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000016">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/roh#correspondingOrganization"/>
+        <owl:inverseOf rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000017"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <rdfs:label xml:lang="en-us">corresponding Organization</rdfs:label>
+        <rdfs:label xml:lang="de-de">entsprechende Organisation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000017 -->
+
+    <owl:ObjectProperty rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000017">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/roh#correspondingOrganizationOf"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <rdfs:label xml:lang="en-us">corresponding Organization Of</rdfs:label>
+        <rdfs:label xml:lang="de-de">entsprechende Organisation der</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000018 -->
+
+    <owl:ObjectProperty rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000018">
+        <rdfs:subPropertyOf rdf:resource="http://vivoweb.org/ontology/core#dateTimeValue"/>
+        <rdfs:domain rdf:resource="http://vivoweb.org/ontology/core#Project"/>
+        <rdfs:range rdf:resource="http://vivoweb.org/ontology/core#DateTimeValue"/>
+        <obo:IAO_0000115 xml:lang="en-us">The date in which a Justificacion has to be delivered.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en-us">foreseen justification date</rdfs:label>
+        <rdfs:label xml:lang="de-de">vorgesehenes Begründungsdatum</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000019 -->
+
+    <owl:ObjectProperty rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000019">
+        <owl:inverseOf rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000024"/>
+        <rdfs:range rdf:resource="http://vivoweb.org/ontology/core#License"/>
+        <obo:IAO_0000115 xml:lang="de-de">Diese Objekteigenschaft wird verwendet, um die Lizenz (vivo:License) einer bestimmten Instanz anzugeben.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en-us">This object property is used to specify the licence (vivo:License) of a given instance.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en-us">has license</rdfs:label>
+        <rdfs:label xml:lang="de-de">hat Lizenz</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000020 -->
+
+    <owl:ObjectProperty rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000020">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000023"/>
+        <rdfs:label xml:lang="en-us">has predecessor</rdfs:label>
+        <rdfs:label xml:lang="de-de">hat Vorgänger</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000021 -->
+
+    <owl:ObjectProperty rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000021">
+        <owl:inverseOf rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000029"/>
+        <rdfs:domain rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000000"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+                        <owl:someValuesFrom rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000006"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:range>
+        <obo:IAO_0000115 xml:lang="en-us">A Project is categorized by different Project Classifications.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en-us">has project categorization</rdfs:label>
+        <rdfs:label xml:lang="de-de">hat Projektkategorisierung</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000022 -->
+
+    <owl:ObjectProperty rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000022">
+        <owl:inverseOf rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000034"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:range rdf:resource="http://w3id.org/roh/mirror/obo/bfo#BFO_0000023"/>
+        <obo:IAO_0000115 xml:lang="en-us">An Agent has a Role in a Relation.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en-us">has role</rdfs:label>
+        <rdfs:label xml:lang="de-de">hat rolle</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000023 -->
+
+    <owl:ObjectProperty rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000023">
+        <rdfs:label xml:lang="en-us">has sucessor</rdfs:label>
+        <rdfs:label xml:lang="de-de">hat Nachfolger</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000024 -->
+
+    <owl:ObjectProperty rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000024">
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <obo:IAO_0000115 xml:lang="de-de">Diese Objekteigenschaft wird verwendet, um Instanzen durch eine bestimmte Lizenz (vivo:License) zu lizenzieren.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en-us">This object property is used to which instances are licensed by a given license (vivo:License).</obo:IAO_0000115>
+        <rdfs:label xml:lang="de-de">gestattet</rdfs:label>
+        <rdfs:label xml:lang="en-us">license</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000025 -->
+
+    <owl:ObjectProperty rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000025">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/roh#partOfRepository"/>
+        <owl:inverseOf rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000031"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ERO_0000071"/>
+                    <rdf:Description rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000001"/>
+                    <rdf:Description rdf:about="http://w3id.org/roh/mirror/bibo#Document"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000009"/>
+        <obo:IAO_0000115 xml:lang="en-us">A core relation that holds between a part and its whole, that in this case is a Repository.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="de-de">Eine Kernbeziehung, die zwischen einem Teil und seinem Ganzen besteht, das in diesem Fall ein Repository ist.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en-us">part of repository</rdfs:label>
+        <rdfs:label xml:lang="de-de">teil des Repository.</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000026 -->
+
+    <owl:ObjectProperty rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000026">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/roh#partOfResearchResult"/>
+        <owl:inverseOf rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000033"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ERO_0000071"/>
+                    <rdf:Description rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000001"/>
+                    <rdf:Description rdf:about="http://w3id.org/roh/mirror/bibo#Document"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000012"/>
+        <obo:IAO_0000115 xml:lang="en-us">A core relation that holds between a part and its hole, that in this case is a Research.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en-us">part of research result</rdfs:label>
+        <rdfs:label xml:lang="de-de">teil eines Forschungsergebnisses</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000027 -->
+
+    <owl:ObjectProperty rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000027">
+        <owl:inverseOf rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000028"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <obo:IAO_0000115 xml:lang="en-us">Some entity producing some Thing.</obo:IAO_0000115>
+        <rdfs:label xml:lang="de-de">erzeugt von</rdfs:label>
+        <rdfs:label xml:lang="en-us">produced by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000028 -->
+
+    <owl:ObjectProperty rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000028">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <obo:IAO_0000115 xml:lang="en-us">Some Thing producing some entity.</obo:IAO_0000115>
+        <rdfs:label xml:lang="de-de">erzeugt</rdfs:label>
+        <rdfs:label xml:lang="en-us">produces</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000029 -->
+
+    <owl:ObjectProperty rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000029">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+                        <owl:someValuesFrom rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000006"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000000"/>
+        <obo:IAO_0000115 xml:lang="en-us">A Project Classification which categorizes a Project.</obo:IAO_0000115>
+        <rdfs:label xml:lang="de-de">Projektkategorisierung von</rdfs:label>
+        <rdfs:label xml:lang="en-us">project categorization of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000030 -->
+
+    <owl:ObjectProperty rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000030">
+        <rdfs:domain rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000000"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000004"/>
+                    <rdf:Description rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000005"/>
+                    <rdf:Description rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000007"/>
+                    <rdf:Description rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000008"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <obo:IAO_0000115>A project may be in a CLOSED, OPEN or in other future status that may be defined.</obo:IAO_0000115>
+        <rdfs:label xml:lang="de-de">Projekt-Status</rdfs:label>
+        <rdfs:label xml:lang="en-us">project status</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000031 -->
+
+    <owl:ObjectProperty rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000031">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/roh#repositoryHasPart"/>
+        <rdfs:domain rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000009"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ERO_0000071"/>
+                    <rdf:Description rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000001"/>
+                    <rdf:Description rdf:about="http://w3id.org/roh/mirror/bibo#Document"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <obo:IAO_0000115 xml:lang="en-us">A core relation that holds between a whole, that in this case is an Repository, and its part .</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="de-de">Eine Kernbeziehung, die zwischen einem Ganzen, in diesem Fall einem Repository, und seinem Teil besteht</obo:IAO_0000115>
+        <rdfs:label xml:lang="es">Repository hat Teil</rdfs:label>
+        <rdfs:label xml:lang="en-us">repository has part</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000032 -->
+
+    <owl:ObjectProperty rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000032">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/roh#repositoryStatus"/>
+        <rdfs:domain rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000009"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000004"/>
+                    <rdf:Description rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000005"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <obo:IAO_0000115 xml:lang="en-us">The status of a Repository (Closed or Open).</obo:IAO_0000115>
+        <rdfs:label xml:lang="es">estado del repositorio</rdfs:label>
+        <rdfs:label xml:lang="en-us">repository status</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000033 -->
+
+    <owl:ObjectProperty rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000033">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/roh#researchResultHasPart"/>
+        <rdfs:domain rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000012"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ERO_0000071"/>
+                    <rdf:Description rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000001"/>
+                    <rdf:Description rdf:about="http://w3id.org/roh/mirror/bibo#Document"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <obo:IAO_0000115 xml:lang="en-us">A core relation that holds between a whole, that in this case is an Research Object (roh:ResearchObject), and its part .</obo:IAO_0000115>
+        <rdfs:label xml:lang="de-de">Forschungsergebnis hat als Teil</rdfs:label>
+        <rdfs:label xml:lang="en-us">research result has part</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000034 -->
+
+    <owl:ObjectProperty rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000034">
+        <rdfs:domain rdf:resource="http://w3id.org/roh/mirror/obo/bfo#BFO_0000023"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <obo:IAO_0000115 xml:lang="en-us">The Role held by an Agent in a Relationship.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en-us">role of</rdfs:label>
+        <rdfs:label xml:lang="de-de">rolle von</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000035 -->
+
+    <owl:ObjectProperty rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000035">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/roh#seqOfAuthors"/>
+        <rdfs:range rdf:resource="http://purl.org/co/List"/>
+        <obo:IAO_0000115 xml:lang="en-us">An unordered list of authors.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="de-de">Eine ungeordnete Liste von Autoren.</obo:IAO_0000115>
+        <rdfs:label xml:lang="de-de">Autorenliste</rdfs:label>
+        <rdfs:label xml:lang="en-us">seq of authors</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000042 -->
+
+    <owl:ObjectProperty rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000042">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/roh#knowledgeAreaOf"/>
+        <owl:inverseOf rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000043"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+                        <owl:someValuesFrom rdf:resource="http://vivoweb.org/ontology/core#KnowledgeArea"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <obo:IAO_0000115 xml:lang="en-us">A skos:Concept which is the knowledge area of some entity</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="de-de">Ein skos:Konzept, das den Wissensbereich einer Entität darstellt</obo:IAO_0000115>
+        <rdfs:label xml:lang="de-de">Wissensbereich der</rdfs:label>
+        <rdfs:label xml:lang="en-us">knowledge area of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000043 -->
+
+    <owl:ObjectProperty rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000043">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/roh#hasKnowledgeArea"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+                        <owl:someValuesFrom rdf:resource="http://vivoweb.org/ontology/core#KnowledgeArea"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:range>
+        <obo:IAO_0000115 xml:lang="de-de">Eine Entität, die sich auf ein Konzept bezieht</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en-us">Some entity related to a Concept</obo:IAO_0000115>
+        <rdfs:label xml:lang="en-us">has knowledge area</rdfs:label>
+        <rdfs:label xml:lang="de-de">hat Wissensbereich</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#dateTimeInterval -->
+
+    <owl:ObjectProperty rdf:about="http://vivoweb.org/ontology/core#dateTimeInterval"/>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#dateTimeValue -->
+
+    <owl:ObjectProperty rdf:about="http://vivoweb.org/ontology/core#dateTimeValue"/>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#projectIn -->
+
+    <owl:ObjectProperty rdf:about="http://vivoweb.org/ontology/core#projectIn"/>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#relates -->
+
+    <owl:ObjectProperty rdf:about="http://vivoweb.org/ontology/core#relates"/>
+    
+
+
+    <!-- http://w3id.org/roh#correspondingAuthor -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/roh#correspondingAuthor"/>
+    
+
+
+    <!-- http://w3id.org/roh#correspondingAuthorOf -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/roh#correspondingAuthorOf"/>
+    
+
+
+    <!-- http://w3id.org/roh#correspondingOrganization -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/roh#correspondingOrganization"/>
+    
+
+
+    <!-- http://w3id.org/roh#correspondingOrganizationOf -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/roh#correspondingOrganizationOf"/>
+    
+
+
+    <!-- http://w3id.org/roh#hasKnowledgeArea -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/roh#hasKnowledgeArea"/>
+    
+
+
+    <!-- http://w3id.org/roh#knowledgeAreaOf -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/roh#knowledgeAreaOf"/>
+    
+
+
+    <!-- http://w3id.org/roh#partOfRepository -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/roh#partOfRepository"/>
+    
+
+
+    <!-- http://w3id.org/roh#partOfResearchResult -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/roh#partOfResearchResult"/>
+    
+
+
+    <!-- http://w3id.org/roh#repositoryHasPart -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/roh#repositoryHasPart"/>
+    
+
+
+    <!-- http://w3id.org/roh#repositoryStatus -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/roh#repositoryStatus"/>
+    
+
+
+    <!-- http://w3id.org/roh#researchResultHasPart -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/roh#researchResultHasPart"/>
+    
+
+
+    <!-- http://w3id.org/roh#seqOfAuthors -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/roh#seqOfAuthors"/>
+    
+
+
+    <!-- http://w3id.org/roh/mirror/bibo#AuthorList -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/roh/mirror/bibo#AuthorList"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#inScheme -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/homepage -->
+
+    <owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/homepage"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000036 -->
+
+    <owl:DatatypeProperty rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000036">
+        <rdfs:subPropertyOf rdf:resource="http://vivoweb.org/ontology/core#identifier"/>
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/roh#projectID"/>
+        <rdfs:domain rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000000"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en-us">project ID</rdfs:label>
+        <rdfs:label xml:lang="de-de">projekt ID</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000037 -->
+
+    <owl:DatatypeProperty rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000037">
+        <rdfs:domain rdf:resource="http://vivoweb.org/ontology/core#Project"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <obo:IAO_0000115 xml:lang="en-us">A defined objective of the project.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en-us">Eine definierte Ziel des Projekts.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en-us">Project Objective</rdfs:label>
+        <rdfs:label xml:lang="de-de">Ziel des Projekts</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000038 -->
+
+    <owl:DatatypeProperty rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000038">
+        <obo:IAO_0000115>A data property that associates a title to a bua Projekt instance.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en-us">Project title</rdfs:label>
+        <rdfs:label xml:lang="de-de">Projekttitel</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000039 -->
+
+    <owl:DatatypeProperty rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000039">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/roh#title"/>
+        <obo:IAO_0000115 xml:lang="en-us">A data property that associates a title to any ROH entity requiring it.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="de-de">Eine Dateneigenschaft, die einen Titel mit jeder ROH-Entität verknüpft, die ihn benötigt.</obo:IAO_0000115>
+        <rdfs:label xml:lang="de-de">titel</rdfs:label>
+        <rdfs:label xml:lang="en-us">title</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#abbreviation -->
+
+    <owl:DatatypeProperty rdf:about="http://vivoweb.org/ontology/core#abbreviation"/>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#description -->
+
+    <owl:DatatypeProperty rdf:about="http://vivoweb.org/ontology/core#description"/>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#freetextKeyword -->
+
+    <owl:DatatypeProperty rdf:about="http://vivoweb.org/ontology/core#freetextKeyword"/>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#identifier -->
+
+    <owl:DatatypeProperty rdf:about="http://vivoweb.org/ontology/core#identifier"/>
+    
+
+
+    <!-- http://w3id.org/roh#projectID -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/roh#projectID"/>
+    
+
+
+    <!-- http://w3id.org/roh#title -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/roh#title"/>
+    
+
+
+    <!-- http://w3id.org/roh/mirror/bibo#abstract -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/roh/mirror/bibo#abstract"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -63,11 +804,768 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/VIVOPROJECTONTOLOGY_0000000 -->
+    <!-- http://purl.obolibrary.org/obo/BFO_0000040 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/VIVOPROJECTONTOLOGY_0000000">
-        <rdfs:label xml:lang="en">root node</rdfs:label>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ERO_0000071 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ERO_0000071"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/Process -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/Process"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/iao/IAO_0000030 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/iao/IAO_0000030"/>
+    
+
+
+    <!-- http://purl.org/co/List -->
+
+    <owl:Class rdf:about="http://purl.org/co/List"/>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#DateTimeInterval -->
+
+    <owl:Class rdf:about="http://vivoweb.org/ontology/core#DateTimeInterval"/>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#DateTimeValue -->
+
+    <owl:Class rdf:about="http://vivoweb.org/ontology/core#DateTimeValue"/>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#KnowledgeArea -->
+
+    <owl:Class rdf:about="http://vivoweb.org/ontology/core#KnowledgeArea">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/roh#KnowledgeArea"/>
+        <rdfs:label xml:lang="en-us">Knowledge area</rdfs:label>
+        <rdfs:label xml:lang="de-de">Wissensbereich</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#License -->
+
+    <owl:Class rdf:about="http://vivoweb.org/ontology/core#License"/>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#Project -->
+
+    <owl:Class rdf:about="http://vivoweb.org/ontology/core#Project"/>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000000 -->
+
+    <owl:Class rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000000">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/Process"/>
+        <rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#Project"/>
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000030"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000004"/>
+                            <rdf:Description rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000005"/>
+                            <rdf:Description rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000007"/>
+                            <rdf:Description rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000008"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vivoweb.org/ontology/core#dateTimeInterval"/>
+                <owl:someValuesFrom rdf:resource="http://vivoweb.org/ontology/core#DateTimeInterval"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vivoweb.org/ontology/core#relates"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/roh/mirror/obo/bfo#BFO_0000023"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ARG_2000028"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2006/vcard/ns#Individual"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:allValuesFrom rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000000"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000018"/>
+                <owl:allValuesFrom rdf:resource="http://vivoweb.org/ontology/core#DateTimeValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000021"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+                                <owl:someValuesFrom rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000006"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000028"/>
+                <owl:allValuesFrom rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000011"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vivoweb.org/ontology/core#relates"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/roh/mirror/obo/bfo#BFO_0000023"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000038"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000037"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vivoweb.org/ontology/core#abbreviation"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vivoweb.org/ontology/core#description"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vivoweb.org/ontology/core#freetextKeyword"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vivoweb.org/ontology/core#identifier"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000112>An endeavor, frequently collaborative, that occurs over a finite period of time and is intended to achieve a particular aim.</obo:IAO_0000112>
+        <obo:IAO_0000115>An endeavor, frequently collaborative, that occurs over a finite period of time and is intended to achieve a particular aim.</obo:IAO_0000115>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouporganizations"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="en-us">Project</rdfs:label>
+        <rdfs:label xml:lang="de-de">Projekt</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000001 -->
+
+    <owl:Class rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000001">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/roh#ExperimentalProtocol"/>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/roh/mirror/obo/bfo#BFO_0000015"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/spar/cito/cites"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000014"/>
+                <owl:allValuesFrom rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000020"/>
+                <owl:allValuesFrom rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000001"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000026"/>
+                <owl:allValuesFrom rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000012"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000028"/>
+                <owl:allValuesFrom rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000002"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000031"/>
+                <owl:allValuesFrom rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000009"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000035"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/co/List"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vivoweb.org/ontology/core#dateTimeInterval"/>
+                <owl:allValuesFrom rdf:resource="http://vivoweb.org/ontology/core#DateTimeInterval"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://xmlns.com/foaf/0.1/homepage"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/roh/mirror/bibo#Webpage"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000035"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000039"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000039"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vivoweb.org/ontology/core#freetextKeyword"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/roh/mirror/bibo#abstract"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="en-us">Experimental Protocol</rdfs:label>
+        <rdfs:label xml:lang="de-de">Experimentelles Protokoll</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000002 -->
+
+    <owl:Class rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000002">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/roh#ExperimentalProtocolResult"/>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/roh/mirror/bibo#Document"/>
+        <obo:IAO_0000115 xml:lang="en-us">Document that contains the result or execution of a Experimental Protocol.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="de-de">Dokument, das das Ergebnis oder die Ausführung eines experimentellen Protokolls enthält.</obo:IAO_0000115>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="en-us">Experimental Protocol Result</rdfs:label>
+        <rdfs:label xml:lang="es">Experimentelles Protokoll Ergebnis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000003 -->
+
+    <owl:Class rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000003">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/roh/mirror/obo/bfo#BFO_0000023"/>
+        <obo:IAO_0000115 xml:lang="en-us">A member who works in a Project or participates in an Activity but do not belong to the main Organization.</obo:IAO_0000115>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="en-us">External Member Role</rdfs:label>
+        <rdfs:label xml:lang="de-de">Rolle des externen Mitglieds</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000004 -->
+
+    <owl:Class rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000004">
+        <rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000013"/>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="en-us">Ausstehend</rdfs:label>
+        <rdfs:label xml:lang="en-us">Open</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000005 -->
+
+    <owl:Class rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000005">
+        <rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000013"/>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="de-de">Abgeschlossen</rdfs:label>
+        <rdfs:label xml:lang="en-us">Closed</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000006 -->
+
+    <owl:Class rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000006">
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="en-us">Project Classification</rdfs:label>
+        <rdfs:label xml:lang="de-de">Projektklassifikation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000007 -->
+
+    <owl:Class rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000007">
+        <rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000013"/>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="en-us">Antrag eingereicht</rdfs:label>
+        <rdfs:label xml:lang="en-us">Proposal Submitted</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000008 -->
+
+    <owl:Class rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000008">
+        <rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000013"/>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="en-us">Abgelehnt</rdfs:label>
+        <rdfs:label xml:lang="en-us">Rejected</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000009 -->
+
+    <owl:Class rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000009">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/iao/IAO_0000030"/>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/roh#Repository"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000032"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000004"/>
+                            <rdf:Description rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000005"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000035"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/co/List"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000014"/>
+                <owl:allValuesFrom rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000019"/>
+                <owl:allValuesFrom rdf:resource="http://vivoweb.org/ontology/core#License"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000020"/>
+                <owl:allValuesFrom rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000009"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000026"/>
+                <owl:allValuesFrom rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000012"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000032"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000004"/>
+                            <rdf:Description rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000005"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000035"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/co/List"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vivoweb.org/ontology/core#dateTimeValue"/>
+                <owl:allValuesFrom rdf:resource="http://vivoweb.org/ontology/core#DateTimeValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://xmlns.com/foaf/0.1/homepage"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/roh/mirror/bibo#Webpage"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000035"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000039"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000039"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vivoweb.org/ontology/core#freetextKeyword"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/roh/mirror/bibo#abstract"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="de-de">Repositorie</rdfs:label>
+        <rdfs:label xml:lang="en-us">Repository</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000010 -->
+
+    <owl:Class rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000010">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/roh#ResearchMaterial"/>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="de-de">Forschungsmaterial</rdfs:label>
+        <rdfs:label xml:lang="en-us">Research material</rdfs:label>
+        <skos:prefLabel xml:lang="de-de">Forschungsmaterial</skos:prefLabel>
+        <skos:prefLabel xml:lang="en-us">Research material</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000011 -->
+
+    <owl:Class rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000011">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000026"/>
+                        <owl:someValuesFrom rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000012"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000027"/>
+                        <owl:allValuesFrom rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000000"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000012"/>
+        <obo:IAO_0000115 xml:lang="en-us">A roh:ResearchObject is generated by one to several foaf:Person specified through property bibo:authorList. Usually a roh:ResearchObject results from the work in a vivo:Project (roh:produces). An elaborated taxonomy of research objects is provided, covering all types of publications, Patents, Software and Webpage. The main author of a research object is accessible through property roh:correspondingAuthor.</obo:IAO_0000115>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="de-de">Forschungsgegenstand</rdfs:label>
+        <rdfs:label xml:lang="en-us">Research Object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000012 -->
+
+    <owl:Class rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000012">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000014"/>
+                <owl:someValuesFrom rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000035"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/co/List"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/spar/cito/cites"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000019"/>
+                <owl:allValuesFrom rdf:resource="http://vivoweb.org/ontology/core#License"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000020"/>
+                <owl:allValuesFrom rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000012"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000023"/>
+                <owl:allValuesFrom rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000012"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000033"/>
+                <owl:allValuesFrom rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000012"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/roh/mirror/bibo#AuthorList"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/co/List"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://xmlns.com/foaf/0.1/homepage"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/roh/mirror/bibo#Webpage"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000039"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vivoweb.org/ontology/core#freetextKeyword"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/roh/mirror/bibo#abstract"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="de-de">Forschungsergebnis</rdfs:label>
+        <rdfs:label xml:lang="en-us">Research Result</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000013 -->
+
+    <owl:Class rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000013">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vivoweb.org/ontology/core#dateTimeInterval"/>
+                <owl:allValuesFrom rdf:resource="http://vivoweb.org/ontology/core#DateTimeInterval"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="de-de">Stand</rdfs:label>
+        <rdfs:label xml:lang="en-us">Status</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/roh#ExperimentalProtocol -->
+
+    <owl:Class rdf:about="http://w3id.org/roh#ExperimentalProtocol"/>
+    
+
+
+    <!-- http://w3id.org/roh#ExperimentalProtocolResult -->
+
+    <owl:Class rdf:about="http://w3id.org/roh#ExperimentalProtocolResult"/>
+    
+
+
+    <!-- http://w3id.org/roh#KnowledgeArea -->
+
+    <owl:Class rdf:about="http://w3id.org/roh#KnowledgeArea"/>
+    
+
+
+    <!-- http://w3id.org/roh#Repository -->
+
+    <owl:Class rdf:about="http://w3id.org/roh#Repository"/>
+    
+
+
+    <!-- http://w3id.org/roh#ResearchMaterial -->
+
+    <owl:Class rdf:about="http://w3id.org/roh#ResearchMaterial"/>
+    
+
+
+    <!-- http://w3id.org/roh#ResearchObject -->
+
+    <owl:Class rdf:about="http://w3id.org/roh#ResearchObject"/>
+    
+
+
+    <!-- http://w3id.org/roh#ResearchResult -->
+
+    <owl:Class rdf:about="http://w3id.org/roh#ResearchResult"/>
+    
+
+
+    <!-- http://w3id.org/roh/mirror/bibo#Document -->
+
+    <owl:Class rdf:about="http://w3id.org/roh/mirror/bibo#Document"/>
+    
+
+
+    <!-- http://w3id.org/roh/mirror/bibo#Webpage -->
+
+    <owl:Class rdf:about="http://w3id.org/roh/mirror/bibo#Webpage"/>
+    
+
+
+    <!-- http://w3id.org/roh/mirror/obo/bfo#BFO_0000015 -->
+
+    <owl:Class rdf:about="http://w3id.org/roh/mirror/obo/bfo#BFO_0000015"/>
+    
+
+
+    <!-- http://w3id.org/roh/mirror/obo/bfo#BFO_0000023 -->
+
+    <owl:Class rdf:about="http://w3id.org/roh/mirror/obo/bfo#BFO_0000023"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+    
+
+
+    <!-- http://www.w3.org/2006/vcard/ns#Individual -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/vcard/ns#Individual"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Agent -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Agent"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Organization -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Organization"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000004"/>
+            <rdf:Description rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000005"/>
+            <rdf:Description rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000007"/>
+            <rdf:Description rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000008"/>
+        </owl:members>
+    </rdf:Description>
 </rdf:RDF>
 
 
