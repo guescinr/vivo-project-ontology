@@ -1,4 +1,4 @@
-
+![Build status](https://github.com/guescinr/vivo-project-ontology/actions/workflows/main.yml/badge.svg?branch=main)
 ![Build Status](https://github.com/guescinr/vivo-project-ontology/workflows/CI/badge.svg)
 # VIVO Project ontology
 
