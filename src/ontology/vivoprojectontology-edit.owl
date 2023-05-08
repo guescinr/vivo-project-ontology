@@ -22,8 +22,8 @@ Import(<http://purl.org/co>)
 Annotation(dcterms:description "Diese Ontologie beschreibt die Projektentität und ihre Eigenschaften und Beschränkungen für die Verwendung in der VIVO-Anwendung"@de-de)
 Annotation(dcterms:description "This ontology describes the project entity and its properties and restraints for use in the VIVO application"@en-us)
 Annotation(dcterms:license <http://creativecommons.org/licenses/by/4.0/>)
-Annotation(dcterms:title ""@de-de)
 Annotation(dcterms:title "VIVO Project ontology"@en-us)
+Annotation(dcterms:title "VIVO Projektontologie"@de-de)
 Annotation(rdfs:label "VIVO Project Ontology"@en-us)
 Annotation(rdfs:label "VIVO Projektontologie"@de-de)
 
@@ -51,6 +51,7 @@ Declaration(Class(vivo:VIVOPROJECTONTOLOGY_0000010))
 Declaration(Class(vivo:VIVOPROJECTONTOLOGY_0000011))
 Declaration(Class(vivo:VIVOPROJECTONTOLOGY_0000012))
 Declaration(Class(vivo:VIVOPROJECTONTOLOGY_0000013))
+Declaration(Class(<http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000044>))
 Declaration(Class(roh:ExperimentalProtocol))
 Declaration(Class(roh:ExperimentalProtocolResult))
 Declaration(Class(roh:KnowledgeArea))
@@ -99,6 +100,9 @@ Declaration(ObjectProperty(vivo:dateTimeInterval))
 Declaration(ObjectProperty(vivo:dateTimeValue))
 Declaration(ObjectProperty(vivo:projectIn))
 Declaration(ObjectProperty(vivo:relates))
+Declaration(ObjectProperty(<http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000045>))
+Declaration(ObjectProperty(<http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000046>))
+Declaration(ObjectProperty(roh:addresses))
 Declaration(ObjectProperty(roh:correspondingAuthor))
 Declaration(ObjectProperty(roh:correspondingAuthorOf))
 Declaration(ObjectProperty(roh:correspondingOrganization))
@@ -164,7 +168,7 @@ AnnotationAssertion(rdfs:label dcterms:title "title")
 #   Object Properties
 ############################
 
-# Object Property: vivo:VIVOPROJECTONTOLOGY_0000014 (entsprechender Autor)
+# Object Property: vivo:VIVOPROJECTONTOLOGY_0000014 (corresponding author)
 
 AnnotationAssertion(obo:IAO_0000115 vivo:VIVOPROJECTONTOLOGY_0000014 "An object property linking an Entity to a Person, considered the author of such Thing."@en-us)
 AnnotationAssertion(obo:IAO_0000115 vivo:VIVOPROJECTONTOLOGY_0000014 "Eine Objekteigenschaft, die eine Entität mit einer Person verbindet, die als Urheber dieser Sache gilt"@de-de)
@@ -374,6 +378,22 @@ AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000043 "hat Wissensbere
 SubObjectPropertyOf(vivo:VIVOPROJECTONTOLOGY_0000043 roh:hasKnowledgeArea)
 ObjectPropertyRange(vivo:VIVOPROJECTONTOLOGY_0000043 ObjectIntersectionOf(skos:Concept ObjectSomeValuesFrom(skos:inScheme vivo:KnowledgeArea)))
 
+# Object Property: <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000045> (addresses)
+
+AnnotationAssertion(rdfs:label <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000045> "addresses"@en-us)
+AnnotationAssertion(rdfs:label <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000045> "adressiert"@de-de)
+SubObjectPropertyOf(<http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000045> roh:addresses)
+InverseObjectProperties(<http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000045> <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000046>)
+ObjectPropertyDomain(<http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000045> roh:ResearchObject)
+ObjectPropertyRange(<http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000045> ObjectIntersectionOf(skos:Concept ObjectSomeValuesFrom(skos:inScheme <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000044>)))
+
+# Object Property: <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000046> (adressiert von)
+
+AnnotationAssertion(rdfs:label <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000046> "addressed by"@en-us)
+AnnotationAssertion(rdfs:label <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000046> "adressiert von"@de-de)
+ObjectPropertyDomain(<http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000046> ObjectIntersectionOf(skos:Concept ObjectSomeValuesFrom(skos:inScheme <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000044>)))
+ObjectPropertyRange(<http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000046> roh:ResearchObject)
+
 
 ############################
 #   Data Properties
@@ -525,6 +545,7 @@ AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot vivo:VIVOPROJECTO
 AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000006 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000006 "Project Classification"@en-us)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000006 "Projektklassifikation"@de-de)
+SubClassOf(vivo:VIVOPROJECTONTOLOGY_0000006 skos:Concept)
 
 # Class: vivo:VIVOPROJECTONTOLOGY_0000007 (Antrag eingereicht)
 
@@ -621,6 +642,22 @@ AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000013 "Stand"@de-de)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000013 "Status"@en-us)
 SubClassOf(vivo:VIVOPROJECTONTOLOGY_0000013 ObjectAllValuesFrom(vivo:dateTimeInterval vivo:DateTimeInterval))
 
+# Class: <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000044> (Problemstellung)
+
+AnnotationAssertion(obo:IAO_0000115 <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000044> "Das Forschungsproblem kennzeichnet, welche Erkenntnisse zu welchen Aspekten des Untersuchungsgegenstandes auf welcher theoretischen, empirischen und methodischen Basis gewonnen werden sollen. Das Forschungsproblem wird auch oft als Fragestellung einer Studie bezeichnet und in mehrere Forschungshypothesen und/oder Forschungsfragen ausdifferenziert"@de-de)
+AnnotationAssertion(obo:IAO_0000115 <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000044> "The research problem indicates which findings are to be obtained on which aspects of the object of study and on which theoretical, empirical and methodological basis. The research problem is also often referred to as the research question of a study and is differentiated into several research hypotheses and/or research questions"@en-us)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000044> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000044> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000044> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:label <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000044> "Problemstellung"@de-de)
+AnnotationAssertion(skos:prefLabel <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000044> "Research problem"@en-us)
+SubClassOf(<http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000044> skos:Concept)
+
+# Class: roh:KnowledgeArea (roh:KnowledgeArea)
+
+SubClassOf(roh:KnowledgeArea skos:Concept)
+
 
 DisjointClasses(vivo:VIVOPROJECTONTOLOGY_0000004 vivo:VIVOPROJECTONTOLOGY_0000005 vivo:VIVOPROJECTONTOLOGY_0000007 vivo:VIVOPROJECTONTOLOGY_0000008)
+DisjointClasses(vivo:VIVOPROJECTONTOLOGY_0000006 <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000044> roh:KnowledgeArea)
 )
