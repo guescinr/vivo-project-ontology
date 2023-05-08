@@ -1,5 +1,5 @@
-![Build status](https://github.com/guescinr/vivo-project-ontology/actions/workflows/qc.yml/badge.svg?) bepp
-![Build Status](https://github.com/guescinr/vivo-project-ontology/workflows/CI/badge.svg)
+![Build status](https://github.com/guescinr/vivo-project-ontology/actions/workflows/qc.yml/badge.svg?)
+
 # VIVO Project ontology
 
 Description: None
