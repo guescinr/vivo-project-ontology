@@ -7,15 +7,15 @@
 @base <http://vivoweb.org/ontology/core/vivoprojectontology/vivoprojectontology-simple.ttl> .
 
 <http://vivoweb.org/ontology/core/vivoprojectontology/vivoprojectontology-simple.ttl> rdf:type owl:Ontology ;
-                                                                                       owl:versionIRI <http://vivoweb.org/ontology/core/vivoprojectontology/releases/2023-05-04/vivoprojectontology-simple.ttl> ;
+                                                                                       owl:versionIRI <http://vivoweb.org/ontology/core/vivoprojectontology/releases/2023-05-08/vivoprojectontology-simple.ttl> ;
                                                                                        <http://purl.org/dc/terms/description> "Diese Ontologie beschreibt die Projektentität und ihre Eigenschaften und Beschränkungen für die Verwendung in der VIVO-Anwendung"@de-de ,
                                                                                                                               "This ontology describes the project entity and its properties and restraints for use in the VIVO application"@en-us ;
                                                                                        <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/4.0/> ;
-                                                                                       <http://purl.org/dc/terms/title> ""@de-de ,
-                                                                                                                        "VIVO Project ontology"@en-us ;
+                                                                                       <http://purl.org/dc/terms/title> "VIVO Project ontology"@en-us ,
+                                                                                                                        "VIVO Projektontologie"@de-de ;
                                                                                        rdfs:label "VIVO Project Ontology"@en-us ,
                                                                                                   "VIVO Projektontologie"@de-de ;
-                                                                                       owl:versionInfo "2023-05-04"^^xsd:string .
+                                                                                       owl:versionInfo "2023-05-08"^^xsd:string .
 
 #################################################################
 #    Annotation properties
@@ -330,6 +330,24 @@ owl:maxCardinality rdf:type owl:AnnotationProperty .
 
 ###  http://vivoweb.org/ontology/core#relates
 <http://vivoweb.org/ontology/core#relates> rdf:type owl:ObjectProperty .
+
+
+###  http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000045
+<http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000045> rdf:type owl:ObjectProperty ;
+                                                               rdfs:subPropertyOf <http://w3id.org/roh#addresses> ;
+                                                               owl:inverseOf <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000046> ;
+                                                               rdfs:label "addresses"@en-us ,
+                                                                          "adressiert"@de-de .
+
+
+###  http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000046
+<http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000046> rdf:type owl:ObjectProperty ;
+                                                               rdfs:label "addressed by"@en-us ,
+                                                                          "adressiert von"@de-de .
+
+
+###  http://w3id.org/roh#addresses
+<http://w3id.org/roh#addresses> rdf:type owl:ObjectProperty .
 
 
 ###  http://w3id.org/roh#correspondingAuthor

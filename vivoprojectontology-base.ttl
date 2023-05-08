@@ -7,16 +7,16 @@
 @base <http://vivoweb.org/ontology/core/vivoprojectontology/vivoprojectontology-base.ttl> .
 
 <http://vivoweb.org/ontology/core/vivoprojectontology/vivoprojectontology-base.ttl> rdf:type owl:Ontology ;
-                                                                                     owl:versionIRI <http://vivoweb.org/ontology/core/vivoprojectontology/releases/2023-05-04/vivoprojectontology-base.ttl> ;
+                                                                                     owl:versionIRI <http://vivoweb.org/ontology/core/vivoprojectontology/releases/2023-05-08/vivoprojectontology-base.ttl> ;
                                                                                      <http://purl.org/dc/elements/1.1/type> <http://purl.obolibrary.org/obo/IAO_8000001> ;
                                                                                      <http://purl.org/dc/terms/description> "Diese Ontologie beschreibt die Projektentität und ihre Eigenschaften und Beschränkungen für die Verwendung in der VIVO-Anwendung"@de-de ,
                                                                                                                             "This ontology describes the project entity and its properties and restraints for use in the VIVO application"@en-us ;
                                                                                      <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/4.0/> ;
-                                                                                     <http://purl.org/dc/terms/title> ""@de-de ,
-                                                                                                                      "VIVO Project ontology"@en-us ;
+                                                                                     <http://purl.org/dc/terms/title> "VIVO Project ontology"@en-us ,
+                                                                                                                      "VIVO Projektontologie"@de-de ;
                                                                                      rdfs:label "VIVO Project Ontology"@en-us ,
                                                                                                 "VIVO Projektontologie"@de-de ;
-                                                                                     owl:versionInfo "2023-05-04"^^xsd:string .
+                                                                                     owl:versionInfo "2023-05-08"^^xsd:string .
 
 #################################################################
 #    Annotation properties
@@ -425,6 +425,42 @@ owl:maxCardinality rdf:type owl:AnnotationProperty .
 <http://vivoweb.org/ontology/core#relates> rdf:type owl:ObjectProperty .
 
 
+###  http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000045
+<http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000045> rdf:type owl:ObjectProperty ;
+                                                               rdfs:subPropertyOf <http://w3id.org/roh#addresses> ;
+                                                               owl:inverseOf <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000046> ;
+                                                               rdfs:domain <http://w3id.org/roh#ResearchObject> ;
+                                                               rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                                                 [ rdf:type owl:Restriction ;
+                                                                                                   owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                                                   owl:someValuesFrom <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000044>
+                                                                                                 ]
+                                                                                               ) ;
+                                                                            rdf:type owl:Class
+                                                                          ] ;
+                                                               rdfs:label "addresses"@en-us ,
+                                                                          "adressiert"@de-de .
+
+
+###  http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000046
+<http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000046> rdf:type owl:ObjectProperty ;
+                                                               rdfs:domain [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                                                  [ rdf:type owl:Restriction ;
+                                                                                                    owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                                                    owl:someValuesFrom <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000044>
+                                                                                                  ]
+                                                                                                ) ;
+                                                                             rdf:type owl:Class
+                                                                           ] ;
+                                                               rdfs:range <http://w3id.org/roh#ResearchObject> ;
+                                                               rdfs:label "addressed by"@en-us ,
+                                                                          "adressiert von"@de-de .
+
+
+###  http://w3id.org/roh#addresses
+<http://w3id.org/roh#addresses> rdf:type owl:ObjectProperty .
+
+
 ###  http://w3id.org/roh#correspondingAuthor
 <http://w3id.org/roh#correspondingAuthor> rdf:type owl:ObjectProperty .
 
@@ -803,6 +839,7 @@ owl:maxCardinality rdf:type owl:AnnotationProperty .
 
 ###  http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000006
 <http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000006> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
                                                                <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
                                                                <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
@@ -1014,6 +1051,18 @@ owl:maxCardinality rdf:type owl:AnnotationProperty .
                                                                           "Status"@en-us .
 
 
+###  http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000044
+<http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000044> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                               <http://purl.obolibrary.org/obo/IAO_0000115> "Das Forschungsproblem kennzeichnet, welche Erkenntnisse zu welchen Aspekten des Untersuchungsgegenstandes auf welcher theoretischen, empirischen und methodischen Basis gewonnen werden sollen. Das Forschungsproblem wird auch oft als Fragestellung einer Studie bezeichnet und in mehrere Forschungshypothesen und/oder Forschungsfragen ausdifferenziert"@de-de ,
+                                                                                                            "The research problem indicates which findings are to be obtained on which aspects of the object of study and on which theoretical, empirical and methodological basis. The research problem is also often referred to as the research question of a study and is differentiated into several research hypotheses and/or research questions"@en-us ;
+                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                               rdfs:label "Problemstellung"@de-de ;
+                                                               <http://www.w3.org/2004/02/skos/core#prefLabel> "Research problem"@en-us .
+
+
 ###  http://w3id.org/roh#ExperimentalProtocol
 <http://w3id.org/roh#ExperimentalProtocol> rdf:type owl:Class .
 
@@ -1023,7 +1072,8 @@ owl:maxCardinality rdf:type owl:AnnotationProperty .
 
 
 ###  http://w3id.org/roh#KnowledgeArea
-<http://w3id.org/roh#KnowledgeArea> rdf:type owl:Class .
+<http://w3id.org/roh#KnowledgeArea> rdf:type owl:Class ;
+                                    rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> .
 
 
 ###  http://w3id.org/roh#Repository
@@ -1087,6 +1137,14 @@ owl:maxCardinality rdf:type owl:AnnotationProperty .
                 <http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000005>
                 <http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000007>
                 <http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000008>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000006>
+                <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000044>
+                <http://w3id.org/roh#KnowledgeArea>
               )
 ] .
 

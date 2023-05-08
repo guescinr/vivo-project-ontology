@@ -11,15 +11,15 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:vitro="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#">
     <owl:Ontology rdf:about="http://vivoweb.org/ontology/core/vivoprojectontology/vivoprojectontology-simple.owl">
-        <owl:versionIRI rdf:resource="http://vivoweb.org/ontology/core/vivoprojectontology/releases/2023-05-04/vivoprojectontology-simple.owl"/>
+        <owl:versionIRI rdf:resource="http://vivoweb.org/ontology/core/vivoprojectontology/releases/2023-05-08/vivoprojectontology-simple.owl"/>
         <terms:description xml:lang="de-de">Diese Ontologie beschreibt die Projektentität und ihre Eigenschaften und Beschränkungen für die Verwendung in der VIVO-Anwendung</terms:description>
         <terms:description xml:lang="en-us">This ontology describes the project entity and its properties and restraints for use in the VIVO application</terms:description>
         <terms:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
-        <terms:title xml:lang="de-de"></terms:title>
         <terms:title xml:lang="en-us">VIVO Project ontology</terms:title>
+        <terms:title xml:lang="de-de">VIVO Projektontologie</terms:title>
         <rdfs:label xml:lang="en-us">VIVO Project Ontology</rdfs:label>
         <rdfs:label xml:lang="de-de">VIVO Projektontologie</rdfs:label>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-05-04</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-05-08</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -477,6 +477,32 @@
     <!-- http://vivoweb.org/ontology/core#relates -->
 
     <owl:ObjectProperty rdf:about="http://vivoweb.org/ontology/core#relates"/>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000045 -->
+
+    <owl:ObjectProperty rdf:about="http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000045">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/roh#addresses"/>
+        <owl:inverseOf rdf:resource="http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000046"/>
+        <rdfs:label xml:lang="en-us">addresses</rdfs:label>
+        <rdfs:label xml:lang="de-de">adressiert</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000046 -->
+
+    <owl:ObjectProperty rdf:about="http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000046">
+        <rdfs:label xml:lang="en-us">addressed by</rdfs:label>
+        <rdfs:label xml:lang="de-de">adressiert von</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/roh#addresses -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/roh#addresses"/>
     
 
 

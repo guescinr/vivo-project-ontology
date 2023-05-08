@@ -12,16 +12,16 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:vitro="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#">
     <owl:Ontology rdf:about="http://vivoweb.org/ontology/core/vivoprojectontology/vivoprojectontology-base.owl">
-        <owl:versionIRI rdf:resource="http://vivoweb.org/ontology/core/vivoprojectontology/releases/2023-05-04/vivoprojectontology-base.owl"/>
+        <owl:versionIRI rdf:resource="http://vivoweb.org/ontology/core/vivoprojectontology/releases/2023-05-08/vivoprojectontology-base.owl"/>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
         <terms:description xml:lang="de-de">Diese Ontologie beschreibt die Projektentität und ihre Eigenschaften und Beschränkungen für die Verwendung in der VIVO-Anwendung</terms:description>
         <terms:description xml:lang="en-us">This ontology describes the project entity and its properties and restraints for use in the VIVO application</terms:description>
         <terms:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
-        <terms:title xml:lang="de-de"></terms:title>
         <terms:title xml:lang="en-us">VIVO Project ontology</terms:title>
+        <terms:title xml:lang="de-de">VIVO Projektontologie</terms:title>
         <rdfs:label xml:lang="en-us">VIVO Project Ontology</rdfs:label>
         <rdfs:label xml:lang="de-de">VIVO Projektontologie</rdfs:label>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-05-04</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-05-08</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -604,6 +604,56 @@
     
 
 
+    <!-- http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000045 -->
+
+    <owl:ObjectProperty rdf:about="http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000045">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/roh#addresses"/>
+        <owl:inverseOf rdf:resource="http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000046"/>
+        <rdfs:domain rdf:resource="http://w3id.org/roh#ResearchObject"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+                        <owl:someValuesFrom rdf:resource="http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000044"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label xml:lang="en-us">addresses</rdfs:label>
+        <rdfs:label xml:lang="de-de">adressiert</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000046 -->
+
+    <owl:ObjectProperty rdf:about="http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000046">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+                        <owl:someValuesFrom rdf:resource="http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000044"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://w3id.org/roh#ResearchObject"/>
+        <rdfs:label xml:lang="en-us">addressed by</rdfs:label>
+        <rdfs:label xml:lang="de-de">adressiert von</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/roh#addresses -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/roh#addresses"/>
+    
+
+
     <!-- http://w3id.org/roh#correspondingAuthor -->
 
     <owl:ObjectProperty rdf:about="http://w3id.org/roh#correspondingAuthor"/>
@@ -1156,6 +1206,7 @@
     <!-- http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000006 -->
 
     <owl:Class rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000006">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
@@ -1455,6 +1506,21 @@
     
 
 
+    <!-- http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000044 -->
+
+    <owl:Class rdf:about="http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000044">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <obo:IAO_0000115 xml:lang="de-de">Das Forschungsproblem kennzeichnet, welche Erkenntnisse zu welchen Aspekten des Untersuchungsgegenstandes auf welcher theoretischen, empirischen und methodischen Basis gewonnen werden sollen. Das Forschungsproblem wird auch oft als Fragestellung einer Studie bezeichnet und in mehrere Forschungshypothesen und/oder Forschungsfragen ausdifferenziert</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en-us">The research problem indicates which findings are to be obtained on which aspects of the object of study and on which theoretical, empirical and methodological basis. The research problem is also often referred to as the research question of a study and is differentiated into several research hypotheses and/or research questions</obo:IAO_0000115>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="de-de">Problemstellung</rdfs:label>
+        <skos:prefLabel xml:lang="en-us">Research problem</skos:prefLabel>
+    </owl:Class>
+    
+
+
     <!-- http://w3id.org/roh#ExperimentalProtocol -->
 
     <owl:Class rdf:about="http://w3id.org/roh#ExperimentalProtocol"/>
@@ -1469,7 +1535,9 @@
 
     <!-- http://w3id.org/roh#KnowledgeArea -->
 
-    <owl:Class rdf:about="http://w3id.org/roh#KnowledgeArea"/>
+    <owl:Class rdf:about="http://w3id.org/roh#KnowledgeArea">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    </owl:Class>
     
 
 
@@ -1566,6 +1634,14 @@
             <rdf:Description rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000005"/>
             <rdf:Description rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000007"/>
             <rdf:Description rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000008"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000006"/>
+            <rdf:Description rdf:about="http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000044"/>
+            <rdf:Description rdf:about="http://w3id.org/roh#KnowledgeArea"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
