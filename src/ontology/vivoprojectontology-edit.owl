@@ -19,6 +19,7 @@ Prefix(dcterms:=<http://purl.org/dc/terms/>)
 
 Ontology(<http://vivoweb.org/ontology/core/>
 Import(<http://purl.org/co>)
+Annotation(dcterms:creator "Rolf Guescini")
 Annotation(dcterms:description "Diese Ontologie beschreibt die Projektentität und ihre Eigenschaften und Beschränkungen für die Verwendung in der VIVO-Anwendung"@de-de)
 Annotation(dcterms:description "This ontology describes the project entity and its properties and restraints for use in the VIVO application"@en-us)
 Annotation(dcterms:license <http://creativecommons.org/licenses/by/4.0/>)
@@ -47,16 +48,15 @@ Declaration(Class(vivo:VIVOPROJECTONTOLOGY_0000006))
 Declaration(Class(vivo:VIVOPROJECTONTOLOGY_0000007))
 Declaration(Class(vivo:VIVOPROJECTONTOLOGY_0000008))
 Declaration(Class(vivo:VIVOPROJECTONTOLOGY_0000009))
-Declaration(Class(vivo:VIVOPROJECTONTOLOGY_0000010))
 Declaration(Class(vivo:VIVOPROJECTONTOLOGY_0000011))
 Declaration(Class(vivo:VIVOPROJECTONTOLOGY_0000012))
 Declaration(Class(vivo:VIVOPROJECTONTOLOGY_0000013))
 Declaration(Class(<http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000044>))
+Declaration(Class(<http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000047>))
 Declaration(Class(roh:ExperimentalProtocol))
 Declaration(Class(roh:ExperimentalProtocolResult))
 Declaration(Class(roh:KnowledgeArea))
 Declaration(Class(roh:Repository))
-Declaration(Class(roh:ResearchMaterial))
 Declaration(Class(roh:ResearchObject))
 Declaration(Class(roh:ResearchResult))
 Declaration(Class(bibo:Document))
@@ -102,11 +102,14 @@ Declaration(ObjectProperty(vivo:projectIn))
 Declaration(ObjectProperty(vivo:relates))
 Declaration(ObjectProperty(<http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000045>))
 Declaration(ObjectProperty(<http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000046>))
+Declaration(ObjectProperty(<http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000048>))
+Declaration(ObjectProperty(<http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000049>))
 Declaration(ObjectProperty(roh:addresses))
 Declaration(ObjectProperty(roh:correspondingAuthor))
 Declaration(ObjectProperty(roh:correspondingAuthorOf))
 Declaration(ObjectProperty(roh:correspondingOrganization))
 Declaration(ObjectProperty(roh:correspondingOrganizationOf))
+Declaration(ObjectProperty(roh:employs))
 Declaration(ObjectProperty(roh:hasKnowledgeArea))
 Declaration(ObjectProperty(roh:knowledgeAreaOf))
 Declaration(ObjectProperty(roh:partOfRepository))
@@ -126,13 +129,17 @@ Declaration(DataProperty(vivo:abbreviation))
 Declaration(DataProperty(vivo:description))
 Declaration(DataProperty(vivo:freetextKeyword))
 Declaration(DataProperty(vivo:identifier))
+Declaration(DataProperty(<http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000052>))
+Declaration(DataProperty(roh:language))
 Declaration(DataProperty(roh:projectID))
 Declaration(DataProperty(roh:title))
 Declaration(DataProperty(bibo:abstract))
 Declaration(AnnotationProperty(obo:IAO_0000112))
 Declaration(AnnotationProperty(obo:IAO_0000115))
+Declaration(AnnotationProperty(dcterms:creator))
 Declaration(AnnotationProperty(dcterms:description))
 Declaration(AnnotationProperty(dcterms:license))
+Declaration(AnnotationProperty(dcterms:source))
 Declaration(AnnotationProperty(dcterms:title))
 Declaration(AnnotationProperty(vitro:descriptionAnnot))
 Declaration(AnnotationProperty(vitro:displayRankAnnot))
@@ -151,6 +158,10 @@ Declaration(AnnotationProperty(skos:prefLabel))
 #   Annotation Properties
 ############################
 
+# Annotation Property: dcterms:creator (creator)
+
+AnnotationAssertion(rdfs:label dcterms:creator "creator")
+
 # Annotation Property: dcterms:description (description)
 
 AnnotationAssertion(rdfs:label dcterms:description "description")
@@ -158,6 +169,10 @@ AnnotationAssertion(rdfs:label dcterms:description "description")
 # Annotation Property: dcterms:license (license)
 
 AnnotationAssertion(rdfs:label dcterms:license "license")
+
+# Annotation Property: dcterms:source (source)
+
+AnnotationAssertion(rdfs:label dcterms:source "source")
 
 # Annotation Property: dcterms:title (title)
 
@@ -172,6 +187,9 @@ AnnotationAssertion(rdfs:label dcterms:title "title")
 
 AnnotationAssertion(obo:IAO_0000115 vivo:VIVOPROJECTONTOLOGY_0000014 "An object property linking an Entity to a Person, considered the author of such Thing."@en-us)
 AnnotationAssertion(obo:IAO_0000115 vivo:VIVOPROJECTONTOLOGY_0000014 "Eine Objekteigenschaft, die eine Entität mit einer Person verbindet, die als Urheber dieser Sache gilt"@de-de)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000014 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000014 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000014 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000014 "corresponding author"@en-us)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000014 "entsprechender Autor"@de-de)
 SubObjectPropertyOf(vivo:VIVOPROJECTONTOLOGY_0000014 roh:correspondingAuthor)
@@ -182,6 +200,9 @@ ObjectPropertyRange(vivo:VIVOPROJECTONTOLOGY_0000014 foaf:Person)
 
 AnnotationAssertion(obo:IAO_0000115 vivo:VIVOPROJECTONTOLOGY_0000015 "An object property linking a Person with a Thing, such person is corresponding author for."@en-us)
 AnnotationAssertion(obo:IAO_0000115 vivo:VIVOPROJECTONTOLOGY_0000015 "Eine Objekteigenschaft, die eine Person mit einer Sache verknüpft, diese Person ist der entsprechende Autor für"@de-de)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000015 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000015 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000015 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000015 "corresponding author of"@en-us)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000015 "entsprechender Autor von"@de-de)
 SubObjectPropertyOf(vivo:VIVOPROJECTONTOLOGY_0000015 roh:correspondingAuthorOf)
@@ -189,6 +210,9 @@ ObjectPropertyDomain(vivo:VIVOPROJECTONTOLOGY_0000015 foaf:Person)
 
 # Object Property: vivo:VIVOPROJECTONTOLOGY_0000016 (entsprechende Organisation)
 
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000016 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000016 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000016 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000016 "corresponding Organization"@en-us)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000016 "entsprechende Organisation"@de-de)
 SubObjectPropertyOf(vivo:VIVOPROJECTONTOLOGY_0000016 roh:correspondingOrganization)
@@ -197,6 +221,9 @@ ObjectPropertyRange(vivo:VIVOPROJECTONTOLOGY_0000016 foaf:Organization)
 
 # Object Property: vivo:VIVOPROJECTONTOLOGY_0000017 (entsprechende Organisation der)
 
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000017 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000017 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000017 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000017 "corresponding Organization Of"@en-us)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000017 "entsprechende Organisation der"@de-de)
 SubObjectPropertyOf(vivo:VIVOPROJECTONTOLOGY_0000017 roh:correspondingOrganizationOf)
@@ -205,6 +232,9 @@ ObjectPropertyDomain(vivo:VIVOPROJECTONTOLOGY_0000017 foaf:Organization)
 # Object Property: vivo:VIVOPROJECTONTOLOGY_0000018 (foreseen justification date)
 
 AnnotationAssertion(obo:IAO_0000115 vivo:VIVOPROJECTONTOLOGY_0000018 "The date in which a Justificacion has to be delivered."@en-us)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000018 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000018 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000018 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000018 "foreseen justification date"@en-us)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000018 "vorgesehenes Begründungsdatum"@de-de)
 SubObjectPropertyOf(vivo:VIVOPROJECTONTOLOGY_0000018 vivo:dateTimeValue)
@@ -215,13 +245,20 @@ ObjectPropertyRange(vivo:VIVOPROJECTONTOLOGY_0000018 vivo:DateTimeValue)
 
 AnnotationAssertion(obo:IAO_0000115 vivo:VIVOPROJECTONTOLOGY_0000019 "Diese Objekteigenschaft wird verwendet, um die Lizenz (vivo:License) einer bestimmten Instanz anzugeben."@de-de)
 AnnotationAssertion(obo:IAO_0000115 vivo:VIVOPROJECTONTOLOGY_0000019 "This object property is used to specify the licence (vivo:License) of a given instance."@en-us)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000019 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000019 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000019 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000019 "has license"@en-us)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000019 "hat Lizenz"@de-de)
 InverseObjectProperties(vivo:VIVOPROJECTONTOLOGY_0000019 vivo:VIVOPROJECTONTOLOGY_0000024)
+FunctionalObjectProperty(vivo:VIVOPROJECTONTOLOGY_0000019)
 ObjectPropertyRange(vivo:VIVOPROJECTONTOLOGY_0000019 vivo:License)
 
 # Object Property: vivo:VIVOPROJECTONTOLOGY_0000020 (hat Vorgänger)
 
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000020 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000020 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000020 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000020 "has predecessor"@en-us)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000020 "hat Vorgänger"@de-de)
 SubObjectPropertyOf(vivo:VIVOPROJECTONTOLOGY_0000020 owl:topObjectProperty)
@@ -230,6 +267,9 @@ InverseObjectProperties(vivo:VIVOPROJECTONTOLOGY_0000020 vivo:VIVOPROJECTONTOLOG
 # Object Property: vivo:VIVOPROJECTONTOLOGY_0000021 (has project categorization)
 
 AnnotationAssertion(obo:IAO_0000115 vivo:VIVOPROJECTONTOLOGY_0000021 "A Project is categorized by different Project Classifications."@en-us)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000021 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000021 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000021 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000021 "has project categorization"@en-us)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000021 "hat Projektkategorisierung"@de-de)
 InverseObjectProperties(vivo:VIVOPROJECTONTOLOGY_0000021 vivo:VIVOPROJECTONTOLOGY_0000029)
@@ -239,29 +279,42 @@ ObjectPropertyRange(vivo:VIVOPROJECTONTOLOGY_0000021 ObjectIntersectionOf(skos:C
 # Object Property: vivo:VIVOPROJECTONTOLOGY_0000022 (hat rolle)
 
 AnnotationAssertion(obo:IAO_0000115 vivo:VIVOPROJECTONTOLOGY_0000022 "An Agent has a Role in a Relation."@en-us)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000022 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000022 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000022 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000022 "has role"@en-us)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000022 "hat rolle"@de-de)
 InverseObjectProperties(vivo:VIVOPROJECTONTOLOGY_0000022 vivo:VIVOPROJECTONTOLOGY_0000034)
 ObjectPropertyDomain(vivo:VIVOPROJECTONTOLOGY_0000022 foaf:Agent)
 ObjectPropertyRange(vivo:VIVOPROJECTONTOLOGY_0000022 bfo:BFO_0000023)
 
-# Object Property: vivo:VIVOPROJECTONTOLOGY_0000023 (has sucessor)
+# Object Property: vivo:VIVOPROJECTONTOLOGY_0000023 (has successor)
 
-AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000023 "has sucessor"@en-us)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000023 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000023 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000023 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000023 "has successor"@en-us)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000023 "hat Nachfolger"@de-de)
 
-# Object Property: vivo:VIVOPROJECTONTOLOGY_0000024 (gestattet)
+# Object Property: vivo:VIVOPROJECTONTOLOGY_0000024 (lienziert)
 
 AnnotationAssertion(obo:IAO_0000115 vivo:VIVOPROJECTONTOLOGY_0000024 "Diese Objekteigenschaft wird verwendet, um Instanzen durch eine bestimmte Lizenz (vivo:License) zu lizenzieren."@de-de)
 AnnotationAssertion(obo:IAO_0000115 vivo:VIVOPROJECTONTOLOGY_0000024 "This object property is used to which instances are licensed by a given license (vivo:License)."@en-us)
-AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000024 "gestattet"@de-de)
-AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000024 "license"@en-us)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000024 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000024 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000024 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000024 "licenses"@en-us)
+AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000024 "lienziert"@de-de)
+InverseFunctionalObjectProperty(vivo:VIVOPROJECTONTOLOGY_0000024)
 ObjectPropertyRange(vivo:VIVOPROJECTONTOLOGY_0000024 owl:Thing)
 
 # Object Property: vivo:VIVOPROJECTONTOLOGY_0000025 (teil des Repository.)
 
 AnnotationAssertion(obo:IAO_0000115 vivo:VIVOPROJECTONTOLOGY_0000025 "A core relation that holds between a part and its whole, that in this case is a Repository."@en-us)
 AnnotationAssertion(obo:IAO_0000115 vivo:VIVOPROJECTONTOLOGY_0000025 "Eine Kernbeziehung, die zwischen einem Teil und seinem Ganzen besteht, das in diesem Fall ein Repository ist."@de-de)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000025 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000025 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000025 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000025 "part of repository"@en-us)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000025 "teil des Repository."@de-de)
 SubObjectPropertyOf(vivo:VIVOPROJECTONTOLOGY_0000025 obo:BFO_0000050)
@@ -273,6 +326,9 @@ ObjectPropertyRange(vivo:VIVOPROJECTONTOLOGY_0000025 vivo:VIVOPROJECTONTOLOGY_00
 # Object Property: vivo:VIVOPROJECTONTOLOGY_0000026 (teil eines Forschungsergebnisses)
 
 AnnotationAssertion(obo:IAO_0000115 vivo:VIVOPROJECTONTOLOGY_0000026 "A core relation that holds between a part and its hole, that in this case is a Research."@en-us)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000026 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000026 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000026 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000026 "part of research result"@en-us)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000026 "teil eines Forschungsergebnisses"@de-de)
 SubObjectPropertyOf(vivo:VIVOPROJECTONTOLOGY_0000026 obo:BFO_0000050)
@@ -284,21 +340,31 @@ ObjectPropertyRange(vivo:VIVOPROJECTONTOLOGY_0000026 vivo:VIVOPROJECTONTOLOGY_00
 # Object Property: vivo:VIVOPROJECTONTOLOGY_0000027 (produced by)
 
 AnnotationAssertion(obo:IAO_0000115 vivo:VIVOPROJECTONTOLOGY_0000027 "Some entity producing some Thing."@en-us)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000027 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000027 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000027 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000027 "erzeugt von"@de-de)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000027 "produced by"@en-us)
 InverseObjectProperties(vivo:VIVOPROJECTONTOLOGY_0000027 vivo:VIVOPROJECTONTOLOGY_0000028)
-ObjectPropertyRange(vivo:VIVOPROJECTONTOLOGY_0000027 owl:Thing)
+ObjectPropertyRange(vivo:VIVOPROJECTONTOLOGY_0000027 vivo:VIVOPROJECTONTOLOGY_0000000)
 
 # Object Property: vivo:VIVOPROJECTONTOLOGY_0000028 (erzeugt)
 
 AnnotationAssertion(obo:IAO_0000115 vivo:VIVOPROJECTONTOLOGY_0000028 "Some Thing producing some entity."@en-us)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000028 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000028 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000028 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000028 "erzeugt"@de-de)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000028 "produces"@en-us)
-ObjectPropertyDomain(vivo:VIVOPROJECTONTOLOGY_0000028 owl:Thing)
+ObjectPropertyDomain(vivo:VIVOPROJECTONTOLOGY_0000028 vivo:VIVOPROJECTONTOLOGY_0000000)
+ObjectPropertyRange(vivo:VIVOPROJECTONTOLOGY_0000028 roh:ResearchObject)
 
 # Object Property: vivo:VIVOPROJECTONTOLOGY_0000029 (project categorization of)
 
 AnnotationAssertion(obo:IAO_0000115 vivo:VIVOPROJECTONTOLOGY_0000029 "A Project Classification which categorizes a Project."@en-us)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000029 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000029 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000029 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000029 "Projektkategorisierung von"@de-de)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000029 "project categorization of"@en-us)
 ObjectPropertyDomain(vivo:VIVOPROJECTONTOLOGY_0000029 ObjectIntersectionOf(skos:Concept ObjectSomeValuesFrom(skos:inScheme vivo:VIVOPROJECTONTOLOGY_0000006)))
@@ -307,6 +373,9 @@ ObjectPropertyRange(vivo:VIVOPROJECTONTOLOGY_0000029 vivo:VIVOPROJECTONTOLOGY_00
 # Object Property: vivo:VIVOPROJECTONTOLOGY_0000030 (Projekt-Status)
 
 AnnotationAssertion(obo:IAO_0000115 vivo:VIVOPROJECTONTOLOGY_0000030 "A project may be in a CLOSED, OPEN or in other future status that may be defined.")
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000030 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000030 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000030 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000030 "Projekt-Status"@de-de)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000030 "project status"@en-us)
 ObjectPropertyDomain(vivo:VIVOPROJECTONTOLOGY_0000030 vivo:VIVOPROJECTONTOLOGY_0000000)
@@ -316,6 +385,9 @@ ObjectPropertyRange(vivo:VIVOPROJECTONTOLOGY_0000030 ObjectUnionOf(vivo:VIVOPROJ
 
 AnnotationAssertion(obo:IAO_0000115 vivo:VIVOPROJECTONTOLOGY_0000031 "A core relation that holds between a whole, that in this case is an Repository, and its part ."@en-us)
 AnnotationAssertion(obo:IAO_0000115 vivo:VIVOPROJECTONTOLOGY_0000031 "Eine Kernbeziehung, die zwischen einem Ganzen, in diesem Fall einem Repository, und seinem Teil besteht"@de-de)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000031 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000031 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000031 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000031 "Repository hat Teil"@es)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000031 "repository has part"@en-us)
 SubObjectPropertyOf(vivo:VIVOPROJECTONTOLOGY_0000031 obo:BFO_0000051)
@@ -326,6 +398,9 @@ ObjectPropertyRange(vivo:VIVOPROJECTONTOLOGY_0000031 ObjectUnionOf(obo:ERO_00000
 # Object Property: vivo:VIVOPROJECTONTOLOGY_0000032 (repository status)
 
 AnnotationAssertion(obo:IAO_0000115 vivo:VIVOPROJECTONTOLOGY_0000032 "The status of a Repository (Closed or Open)."@en-us)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000032 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000032 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000032 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000032 "estado del repositorio"@es)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000032 "repository status"@en-us)
 SubObjectPropertyOf(vivo:VIVOPROJECTONTOLOGY_0000032 roh:repositoryStatus)
@@ -334,7 +409,10 @@ ObjectPropertyRange(vivo:VIVOPROJECTONTOLOGY_0000032 ObjectUnionOf(vivo:VIVOPROJ
 
 # Object Property: vivo:VIVOPROJECTONTOLOGY_0000033 (research result has part)
 
-AnnotationAssertion(obo:IAO_0000115 vivo:VIVOPROJECTONTOLOGY_0000033 "A core relation that holds between a whole, that in this case is an Research Object (roh:ResearchObject), and its part ."@en-us)
+AnnotationAssertion(obo:IAO_0000115 vivo:VIVOPROJECTONTOLOGY_0000033 "A core relation that holds between a whole, that in this case is an Research Object, and its part ."@en-us)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000033 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000033 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000033 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000033 "Forschungsergebnis hat als Teil"@de-de)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000033 "research result has part"@en-us)
 SubObjectPropertyOf(vivo:VIVOPROJECTONTOLOGY_0000033 obo:BFO_0000051)
@@ -345,6 +423,9 @@ ObjectPropertyRange(vivo:VIVOPROJECTONTOLOGY_0000033 ObjectUnionOf(obo:ERO_00000
 # Object Property: vivo:VIVOPROJECTONTOLOGY_0000034 (role of)
 
 AnnotationAssertion(obo:IAO_0000115 vivo:VIVOPROJECTONTOLOGY_0000034 "The Role held by an Agent in a Relationship."@en-us)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000034 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000034 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000034 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000034 "role of"@en-us)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000034 "rolle von"@de-de)
 ObjectPropertyDomain(vivo:VIVOPROJECTONTOLOGY_0000034 bfo:BFO_0000023)
@@ -357,29 +438,41 @@ AnnotationAssertion(obo:IAO_0000115 vivo:VIVOPROJECTONTOLOGY_0000035 "Eine ungeo
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000035 "Autorenliste"@de-de)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000035 "seq of authors"@en-us)
 SubObjectPropertyOf(vivo:VIVOPROJECTONTOLOGY_0000035 roh:seqOfAuthors)
+ObjectPropertyDomain(vivo:VIVOPROJECTONTOLOGY_0000035 roh:ResearchObject)
 ObjectPropertyRange(vivo:VIVOPROJECTONTOLOGY_0000035 <http://purl.org/co/List>)
 
 # Object Property: vivo:VIVOPROJECTONTOLOGY_0000042 (knowledge area of)
 
 AnnotationAssertion(obo:IAO_0000115 vivo:VIVOPROJECTONTOLOGY_0000042 "A skos:Concept which is the knowledge area of some entity"@en-us)
 AnnotationAssertion(obo:IAO_0000115 vivo:VIVOPROJECTONTOLOGY_0000042 "Ein skos:Konzept, das den Wissensbereich einer Entität darstellt"@de-de)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000042 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000042 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000042 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000042 "Wissensbereich der"@de-de)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000042 "knowledge area of"@en-us)
 SubObjectPropertyOf(vivo:VIVOPROJECTONTOLOGY_0000042 roh:knowledgeAreaOf)
 InverseObjectProperties(vivo:VIVOPROJECTONTOLOGY_0000042 vivo:VIVOPROJECTONTOLOGY_0000043)
 ObjectPropertyDomain(vivo:VIVOPROJECTONTOLOGY_0000042 ObjectIntersectionOf(skos:Concept ObjectSomeValuesFrom(skos:inScheme vivo:KnowledgeArea)))
+ObjectPropertyRange(vivo:VIVOPROJECTONTOLOGY_0000042 vivo:VIVOPROJECTONTOLOGY_0000000)
 
 # Object Property: vivo:VIVOPROJECTONTOLOGY_0000043 (has knowledge area)
 
 AnnotationAssertion(obo:IAO_0000115 vivo:VIVOPROJECTONTOLOGY_0000043 "Eine Entität, die sich auf ein Konzept bezieht"@de-de)
 AnnotationAssertion(obo:IAO_0000115 vivo:VIVOPROJECTONTOLOGY_0000043 "Some entity related to a Concept"@en-us)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000043 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000043 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000043 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000043 "has knowledge area"@en-us)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000043 "hat Wissensbereich"@de-de)
 SubObjectPropertyOf(vivo:VIVOPROJECTONTOLOGY_0000043 roh:hasKnowledgeArea)
+ObjectPropertyDomain(vivo:VIVOPROJECTONTOLOGY_0000043 vivo:VIVOPROJECTONTOLOGY_0000000)
 ObjectPropertyRange(vivo:VIVOPROJECTONTOLOGY_0000043 ObjectIntersectionOf(skos:Concept ObjectSomeValuesFrom(skos:inScheme vivo:KnowledgeArea)))
 
 # Object Property: <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000045> (addresses)
 
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000045> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000045> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000045> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(rdfs:label <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000045> "addresses"@en-us)
 AnnotationAssertion(rdfs:label <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000045> "adressiert"@de-de)
 SubObjectPropertyOf(<http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000045> roh:addresses)
@@ -389,10 +482,34 @@ ObjectPropertyRange(<http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_000004
 
 # Object Property: <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000046> (adressiert von)
 
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000046> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000046> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000046> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(rdfs:label <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000046> "addressed by"@en-us)
 AnnotationAssertion(rdfs:label <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000046> "adressiert von"@de-de)
 ObjectPropertyDomain(<http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000046> ObjectIntersectionOf(skos:Concept ObjectSomeValuesFrom(skos:inScheme <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000044>)))
 ObjectPropertyRange(<http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000046> roh:ResearchObject)
+
+# Object Property: <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000048> (Employs)
+
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000048> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000048> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000048> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:label <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000048> "Anwendet"@de-de)
+AnnotationAssertion(rdfs:label <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000048> "Employs"@en-us)
+SubObjectPropertyOf(<http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000048> roh:employs)
+InverseObjectProperties(<http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000048> <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000049>)
+ObjectPropertyDomain(<http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000048> roh:ResearchObject)
+ObjectPropertyRange(<http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000048> <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000047>)
+
+# Object Property: <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000049> (Employed in)
+
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000049> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000049> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000049> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:label <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000049> "Anwendet in"@de-de)
+AnnotationAssertion(rdfs:label <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000049> "Employed in"@en-us)
+InverseObjectProperties(<http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000049> roh:employs)
 
 
 ############################
@@ -431,6 +548,15 @@ AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000039 "titel"@de-de)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000039 "title"@en-us)
 SubDataPropertyOf(vivo:VIVOPROJECTONTOLOGY_0000039 roh:title)
 
+# Data Property: <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000052> (Language)
+
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000052> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000052> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000052> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:label <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000052> "Language"@en-us)
+AnnotationAssertion(rdfs:label <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000052> "Sprache"@de-de)
+SubDataPropertyOf(<http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000052> roh:language)
+
 
 
 ############################
@@ -439,6 +565,9 @@ SubDataPropertyOf(vivo:VIVOPROJECTONTOLOGY_0000039 roh:title)
 
 # Class: vivo:KnowledgeArea (Knowledge area)
 
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot vivo:KnowledgeArea <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot vivo:KnowledgeArea <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot vivo:KnowledgeArea <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(rdfs:label vivo:KnowledgeArea "Knowledge area"@en-us)
 AnnotationAssertion(rdfs:label vivo:KnowledgeArea "Wissensbereich"@de-de)
 SubClassOf(vivo:KnowledgeArea roh:KnowledgeArea)
@@ -496,6 +625,7 @@ SubClassOf(vivo:VIVOPROJECTONTOLOGY_0000001 DataSomeValuesFrom(vivo:VIVOPROJECTO
 SubClassOf(vivo:VIVOPROJECTONTOLOGY_0000001 DataAllValuesFrom(vivo:VIVOPROJECTONTOLOGY_0000039 xsd:string))
 SubClassOf(vivo:VIVOPROJECTONTOLOGY_0000001 DataAllValuesFrom(vivo:freetextKeyword xsd:string))
 SubClassOf(vivo:VIVOPROJECTONTOLOGY_0000001 DataAllValuesFrom(bibo:abstract xsd:string))
+DisjointClasses(vivo:VIVOPROJECTONTOLOGY_0000001 <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000047>)
 
 # Class: vivo:VIVOPROJECTONTOLOGY_0000002 (Experimentelles Protokoll Ergebnis)
 
@@ -590,19 +720,6 @@ SubClassOf(vivo:VIVOPROJECTONTOLOGY_0000009 DataAllValuesFrom(vivo:VIVOPROJECTON
 SubClassOf(vivo:VIVOPROJECTONTOLOGY_0000009 DataAllValuesFrom(vivo:freetextKeyword xsd:string))
 SubClassOf(vivo:VIVOPROJECTONTOLOGY_0000009 DataAllValuesFrom(bibo:abstract xsd:string))
 
-# Class: vivo:VIVOPROJECTONTOLOGY_0000010 (Forschungsmaterial)
-
-AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000010 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000010 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(vitro:inClassGroup vivo:VIVOPROJECTONTOLOGY_0000010 <http://vivoweb.org/ontology#vitroClassGrouppublications>)
-AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000010 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
-AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000010 "Forschungsmaterial"@de-de)
-AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000010 "Research material"@en-us)
-AnnotationAssertion(skos:prefLabel vivo:VIVOPROJECTONTOLOGY_0000010 "Forschungsmaterial"@de-de)
-AnnotationAssertion(skos:prefLabel vivo:VIVOPROJECTONTOLOGY_0000010 "Research material"@en-us)
-SubClassOf(vivo:VIVOPROJECTONTOLOGY_0000010 obo:BFO_0000040)
-SubClassOf(vivo:VIVOPROJECTONTOLOGY_0000010 roh:ResearchMaterial)
-
 # Class: vivo:VIVOPROJECTONTOLOGY_0000011 (Forschungsgegenstand)
 
 AnnotationAssertion(obo:IAO_0000115 vivo:VIVOPROJECTONTOLOGY_0000011 "A roh:ResearchObject is generated by one to several foaf:Person specified through property bibo:authorList. Usually a roh:ResearchObject results from the work in a vivo:Project (roh:produces). An elaborated taxonomy of research objects is provided, covering all types of publications, Patents, Software and Webpage. The main author of a research object is accessible through property roh:correspondingAuthor."@en-us)
@@ -614,6 +731,7 @@ AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000011 "Forschungsgegen
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000011 "Research Object"@en-us)
 EquivalentClasses(vivo:VIVOPROJECTONTOLOGY_0000011 ObjectUnionOf(ObjectSomeValuesFrom(vivo:VIVOPROJECTONTOLOGY_0000026 vivo:VIVOPROJECTONTOLOGY_0000012) ObjectAllValuesFrom(vivo:VIVOPROJECTONTOLOGY_0000027 vivo:VIVOPROJECTONTOLOGY_0000000)))
 SubClassOf(vivo:VIVOPROJECTONTOLOGY_0000011 vivo:VIVOPROJECTONTOLOGY_0000012)
+SubClassOf(vivo:VIVOPROJECTONTOLOGY_0000011 roh:ResearchObject)
 
 # Class: vivo:VIVOPROJECTONTOLOGY_0000012 (Forschungsergebnis)
 
@@ -623,6 +741,7 @@ AnnotationAssertion(vitro:inClassGroup vivo:VIVOPROJECTONTOLOGY_0000012 <http://
 AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000012 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000012 "Forschungsergebnis"@de-de)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000012 "Research Result"@en-us)
+SubClassOf(vivo:VIVOPROJECTONTOLOGY_0000012 roh:ResearchResult)
 SubClassOf(vivo:VIVOPROJECTONTOLOGY_0000012 ObjectSomeValuesFrom(vivo:VIVOPROJECTONTOLOGY_0000014 foaf:Person))
 SubClassOf(vivo:VIVOPROJECTONTOLOGY_0000012 ObjectSomeValuesFrom(vivo:VIVOPROJECTONTOLOGY_0000035 <http://purl.org/co/List>))
 SubClassOf(vivo:VIVOPROJECTONTOLOGY_0000012 ObjectAllValuesFrom(<http://purl.org/spar/cito/cites> owl:Thing))
@@ -630,14 +749,19 @@ SubClassOf(vivo:VIVOPROJECTONTOLOGY_0000012 ObjectAllValuesFrom(vivo:VIVOPROJECT
 SubClassOf(vivo:VIVOPROJECTONTOLOGY_0000012 ObjectAllValuesFrom(vivo:VIVOPROJECTONTOLOGY_0000020 vivo:VIVOPROJECTONTOLOGY_0000012))
 SubClassOf(vivo:VIVOPROJECTONTOLOGY_0000012 ObjectAllValuesFrom(vivo:VIVOPROJECTONTOLOGY_0000023 vivo:VIVOPROJECTONTOLOGY_0000012))
 SubClassOf(vivo:VIVOPROJECTONTOLOGY_0000012 ObjectAllValuesFrom(vivo:VIVOPROJECTONTOLOGY_0000033 vivo:VIVOPROJECTONTOLOGY_0000012))
+SubClassOf(vivo:VIVOPROJECTONTOLOGY_0000012 ObjectAllValuesFrom(vivo:VIVOPROJECTONTOLOGY_0000043 ObjectIntersectionOf(skos:Concept ObjectSomeValuesFrom(skos:inScheme roh:KnowledgeArea))))
 SubClassOf(vivo:VIVOPROJECTONTOLOGY_0000012 ObjectAllValuesFrom(bibo:AuthorList <http://purl.org/co/List>))
 SubClassOf(vivo:VIVOPROJECTONTOLOGY_0000012 ObjectAllValuesFrom(foaf:homepage bibo:Webpage))
 SubClassOf(vivo:VIVOPROJECTONTOLOGY_0000012 DataAllValuesFrom(vivo:VIVOPROJECTONTOLOGY_0000039 xsd:string))
 SubClassOf(vivo:VIVOPROJECTONTOLOGY_0000012 DataAllValuesFrom(vivo:freetextKeyword xsd:string))
+SubClassOf(vivo:VIVOPROJECTONTOLOGY_0000012 DataAllValuesFrom(roh:language xsd:string))
 SubClassOf(vivo:VIVOPROJECTONTOLOGY_0000012 DataAllValuesFrom(bibo:abstract xsd:string))
 
 # Class: vivo:VIVOPROJECTONTOLOGY_0000013 (Status)
 
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000013 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000013 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000013 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000013 "Stand"@de-de)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000013 "Status"@en-us)
 SubClassOf(vivo:VIVOPROJECTONTOLOGY_0000013 ObjectAllValuesFrom(vivo:dateTimeInterval vivo:DateTimeInterval))
@@ -653,9 +777,22 @@ AnnotationAssertion(rdfs:label <http://vivoweb.org/ontology/core/VIVOPROJECTONTO
 AnnotationAssertion(skos:prefLabel <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000044> "Research problem"@en-us)
 SubClassOf(<http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000044> skos:Concept)
 
+# Class: <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000047> (Research Method)
+
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000047> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000047> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000047> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:label <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000047> "Forschungsmethode"@de-de)
+AnnotationAssertion(rdfs:label <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000047> "Research Method"@en-us)
+SubClassOf(<http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000047> bfo:BFO_0000015)
+
 # Class: roh:KnowledgeArea (roh:KnowledgeArea)
 
 SubClassOf(roh:KnowledgeArea skos:Concept)
+
+# Class: roh:ResearchObject (roh:ResearchObject)
+
+SubClassOf(roh:ResearchObject roh:ResearchResult)
 
 
 DisjointClasses(vivo:VIVOPROJECTONTOLOGY_0000004 vivo:VIVOPROJECTONTOLOGY_0000005 vivo:VIVOPROJECTONTOLOGY_0000007 vivo:VIVOPROJECTONTOLOGY_0000008)
