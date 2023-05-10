@@ -53,6 +53,7 @@ Declaration(Class(vivo:VIVOPROJECTONTOLOGY_0000012))
 Declaration(Class(vivo:VIVOPROJECTONTOLOGY_0000013))
 Declaration(Class(<http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000044>))
 Declaration(Class(<http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000047>))
+Declaration(Class(<http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000053>))
 Declaration(Class(roh:ExperimentalProtocol))
 Declaration(Class(roh:ExperimentalProtocolResult))
 Declaration(Class(roh:KnowledgeArea))
@@ -194,6 +195,8 @@ AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000014 "corresponding a
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000014 "entsprechender Autor"@de-de)
 SubObjectPropertyOf(vivo:VIVOPROJECTONTOLOGY_0000014 roh:correspondingAuthor)
 InverseObjectProperties(vivo:VIVOPROJECTONTOLOGY_0000014 vivo:VIVOPROJECTONTOLOGY_0000015)
+ObjectPropertyDomain(vivo:VIVOPROJECTONTOLOGY_0000014 vivo:VIVOPROJECTONTOLOGY_0000011)
+ObjectPropertyRange(vivo:VIVOPROJECTONTOLOGY_0000014 <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000053>)
 ObjectPropertyRange(vivo:VIVOPROJECTONTOLOGY_0000014 foaf:Person)
 
 # Object Property: vivo:VIVOPROJECTONTOLOGY_0000015 (corresponding author of)
@@ -206,7 +209,9 @@ AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot vivo:VIVOPROJE
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000015 "corresponding author of"@en-us)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000015 "entsprechender Autor von"@de-de)
 SubObjectPropertyOf(vivo:VIVOPROJECTONTOLOGY_0000015 roh:correspondingAuthorOf)
+ObjectPropertyDomain(vivo:VIVOPROJECTONTOLOGY_0000015 <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000053>)
 ObjectPropertyDomain(vivo:VIVOPROJECTONTOLOGY_0000015 foaf:Person)
+ObjectPropertyRange(vivo:VIVOPROJECTONTOLOGY_0000015 vivo:VIVOPROJECTONTOLOGY_0000011)
 
 # Object Property: vivo:VIVOPROJECTONTOLOGY_0000016 (entsprechende Organisation)
 
@@ -332,7 +337,6 @@ AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot vivo:VIVOPROJE
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000026 "part of research result"@en-us)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000026 "teil eines Forschungsergebnisses"@de-de)
 SubObjectPropertyOf(vivo:VIVOPROJECTONTOLOGY_0000026 obo:BFO_0000050)
-SubObjectPropertyOf(vivo:VIVOPROJECTONTOLOGY_0000026 roh:partOfResearchResult)
 InverseObjectProperties(vivo:VIVOPROJECTONTOLOGY_0000026 vivo:VIVOPROJECTONTOLOGY_0000033)
 ObjectPropertyDomain(vivo:VIVOPROJECTONTOLOGY_0000026 ObjectUnionOf(obo:ERO_0000071 vivo:VIVOPROJECTONTOLOGY_0000001 bibo:Document))
 ObjectPropertyRange(vivo:VIVOPROJECTONTOLOGY_0000026 vivo:VIVOPROJECTONTOLOGY_0000012)
@@ -511,6 +515,12 @@ AnnotationAssertion(rdfs:label <http://vivoweb.org/ontology/core/VIVOPROJECTONTO
 AnnotationAssertion(rdfs:label <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000049> "Employed in"@en-us)
 InverseObjectProperties(<http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000049> roh:employs)
 
+# Object Property: bibo:AuthorList (bibo:AuthorList)
+
+ObjectPropertyDomain(bibo:AuthorList vivo:VIVOPROJECTONTOLOGY_0000011)
+ObjectPropertyDomain(bibo:AuthorList vivo:VIVOPROJECTONTOLOGY_0000012)
+ObjectPropertyRange(bibo:AuthorList <http://purl.org/co/List>)
+
 
 ############################
 #   Data Properties
@@ -583,8 +593,7 @@ AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot vivo:VIVOPROJE
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000000 "Project"@en-us)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000000 "Projekt"@de-de)
 SubClassOf(vivo:VIVOPROJECTONTOLOGY_0000000 obo:Process)
-SubClassOf(vivo:VIVOPROJECTONTOLOGY_0000000 vivo:Project)
-SubClassOf(vivo:VIVOPROJECTONTOLOGY_0000000 foaf:Agent)
+SubClassOf(vivo:VIVOPROJECTONTOLOGY_0000000 <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000053>)
 SubClassOf(vivo:VIVOPROJECTONTOLOGY_0000000 ObjectSomeValuesFrom(vivo:VIVOPROJECTONTOLOGY_0000030 ObjectUnionOf(vivo:VIVOPROJECTONTOLOGY_0000004 vivo:VIVOPROJECTONTOLOGY_0000005 vivo:VIVOPROJECTONTOLOGY_0000007 vivo:VIVOPROJECTONTOLOGY_0000008)))
 SubClassOf(vivo:VIVOPROJECTONTOLOGY_0000000 ObjectSomeValuesFrom(vivo:dateTimeInterval vivo:DateTimeInterval))
 SubClassOf(vivo:VIVOPROJECTONTOLOGY_0000000 ObjectSomeValuesFrom(vivo:relates bfo:BFO_0000023))
@@ -592,7 +601,6 @@ SubClassOf(vivo:VIVOPROJECTONTOLOGY_0000000 ObjectAllValuesFrom(obo:ARG_2000028 
 SubClassOf(vivo:VIVOPROJECTONTOLOGY_0000000 ObjectAllValuesFrom(obo:BFO_0000051 vivo:VIVOPROJECTONTOLOGY_0000000))
 SubClassOf(vivo:VIVOPROJECTONTOLOGY_0000000 ObjectAllValuesFrom(vivo:VIVOPROJECTONTOLOGY_0000018 vivo:DateTimeValue))
 SubClassOf(vivo:VIVOPROJECTONTOLOGY_0000000 ObjectAllValuesFrom(vivo:VIVOPROJECTONTOLOGY_0000021 ObjectIntersectionOf(skos:Concept ObjectSomeValuesFrom(skos:inScheme vivo:VIVOPROJECTONTOLOGY_0000006))))
-SubClassOf(vivo:VIVOPROJECTONTOLOGY_0000000 ObjectAllValuesFrom(vivo:VIVOPROJECTONTOLOGY_0000028 vivo:VIVOPROJECTONTOLOGY_0000011))
 SubClassOf(vivo:VIVOPROJECTONTOLOGY_0000000 ObjectAllValuesFrom(vivo:relates bfo:BFO_0000023))
 SubClassOf(vivo:VIVOPROJECTONTOLOGY_0000000 DataSomeValuesFrom(vivo:VIVOPROJECTONTOLOGY_0000038 xsd:string))
 SubClassOf(vivo:VIVOPROJECTONTOLOGY_0000000 DataAllValuesFrom(vivo:VIVOPROJECTONTOLOGY_0000037 rdfs:Literal))
@@ -729,7 +737,7 @@ AnnotationAssertion(vitro:inClassGroup vivo:VIVOPROJECTONTOLOGY_0000011 <http://
 AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot vivo:VIVOPROJECTONTOLOGY_0000011 <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000011 "Forschungsgegenstand"@de-de)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000011 "Research Object"@en-us)
-EquivalentClasses(vivo:VIVOPROJECTONTOLOGY_0000011 ObjectUnionOf(ObjectSomeValuesFrom(vivo:VIVOPROJECTONTOLOGY_0000026 vivo:VIVOPROJECTONTOLOGY_0000012) ObjectAllValuesFrom(vivo:VIVOPROJECTONTOLOGY_0000027 vivo:VIVOPROJECTONTOLOGY_0000000)))
+EquivalentClasses(vivo:VIVOPROJECTONTOLOGY_0000011 ObjectUnionOf(ObjectSomeValuesFrom(vivo:VIVOPROJECTONTOLOGY_0000026 vivo:VIVOPROJECTONTOLOGY_0000012) ObjectAllValuesFrom(vivo:VIVOPROJECTONTOLOGY_0000027 <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000053>)))
 SubClassOf(vivo:VIVOPROJECTONTOLOGY_0000011 vivo:VIVOPROJECTONTOLOGY_0000012)
 SubClassOf(vivo:VIVOPROJECTONTOLOGY_0000011 roh:ResearchObject)
 
@@ -785,6 +793,18 @@ AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://vivowe
 AnnotationAssertion(rdfs:label <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000047> "Forschungsmethode"@de-de)
 AnnotationAssertion(rdfs:label <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000047> "Research Method"@en-us)
 SubClassOf(<http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000047> bfo:BFO_0000015)
+
+# Class: <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000053> (Research output producing agent)
+
+AnnotationAssertion(obo:IAO_0000115 <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000053> "Der Erzeuger von Forschungsergebnisse ist eine Unterklasse von foaf:Agent und ist ein Ding, das Forschungsergebnisse produziert"@de-de)
+AnnotationAssertion(obo:IAO_0000115 <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000053> "The Research Output producing agent is a subclass of foaf:Agent, and is a Thing that produces Research Outputs"@en-us)
+AnnotationAssertion(vitro:hiddenFromDisplayBelowRoleLevelAnnot <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000053> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:hiddenFromPublishBelowRoleLevelAnnot <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000053> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000053> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public>)
+AnnotationAssertion(rdfs:label <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000053> "Erzeuger von Forschungsergebnissen"@de-de)
+AnnotationAssertion(rdfs:label <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000053> "Research output producing agent"@en-us)
+SubClassOf(<http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000053> foaf:Agent)
+SubClassOf(<http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000053> ObjectAllValuesFrom(vivo:VIVOPROJECTONTOLOGY_0000028 vivo:VIVOPROJECTONTOLOGY_0000011))
 
 # Class: roh:KnowledgeArea (roh:KnowledgeArea)
 
