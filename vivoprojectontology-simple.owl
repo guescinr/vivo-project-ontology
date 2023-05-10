@@ -11,7 +11,8 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:vitro="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#">
     <owl:Ontology rdf:about="http://vivoweb.org/ontology/core/vivoprojectontology/vivoprojectontology-simple.owl">
-        <owl:versionIRI rdf:resource="http://vivoweb.org/ontology/core/vivoprojectontology/releases/2023-05-08/vivoprojectontology-simple.owl"/>
+        <owl:versionIRI rdf:resource="http://vivoweb.org/ontology/core/vivoprojectontology/releases/2023-05-10/vivoprojectontology-simple.owl"/>
+        <terms:creator>Rolf Guescini</terms:creator>
         <terms:description xml:lang="de-de">Diese Ontologie beschreibt die Projektentität und ihre Eigenschaften und Beschränkungen für die Verwendung in der VIVO-Anwendung</terms:description>
         <terms:description xml:lang="en-us">This ontology describes the project entity and its properties and restraints for use in the VIVO application</terms:description>
         <terms:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
@@ -19,7 +20,7 @@
         <terms:title xml:lang="de-de">VIVO Projektontologie</terms:title>
         <rdfs:label xml:lang="en-us">VIVO Project Ontology</rdfs:label>
         <rdfs:label xml:lang="de-de">VIVO Projektontologie</rdfs:label>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-05-08</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-05-10</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -47,6 +48,14 @@
     
 
 
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator">
+        <rdfs:label>creator</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- http://purl.org/dc/terms/description -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description">
@@ -59,6 +68,14 @@
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license">
         <rdfs:label>license</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/source -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/source">
+        <rdfs:label>source</rdfs:label>
     </owl:AnnotationProperty>
     
 
@@ -191,6 +208,9 @@
         <owl:inverseOf rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000015"/>
         <obo:IAO_0000115 xml:lang="en-us">An object property linking an Entity to a Person, considered the author of such Thing.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="de-de">Eine Objekteigenschaft, die eine Entität mit einer Person verbindet, die als Urheber dieser Sache gilt</obo:IAO_0000115>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <rdfs:label xml:lang="en-us">corresponding author</rdfs:label>
         <rdfs:label xml:lang="de-de">entsprechender Autor</rdfs:label>
     </owl:ObjectProperty>
@@ -203,6 +223,9 @@
         <rdfs:subPropertyOf rdf:resource="http://w3id.org/roh#correspondingAuthorOf"/>
         <obo:IAO_0000115 xml:lang="en-us">An object property linking a Person with a Thing, such person is corresponding author for.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="de-de">Eine Objekteigenschaft, die eine Person mit einer Sache verknüpft, diese Person ist der entsprechende Autor für</obo:IAO_0000115>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <rdfs:label xml:lang="en-us">corresponding author of</rdfs:label>
         <rdfs:label xml:lang="de-de">entsprechender Autor von</rdfs:label>
     </owl:ObjectProperty>
@@ -214,6 +237,9 @@
     <owl:ObjectProperty rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000016">
         <rdfs:subPropertyOf rdf:resource="http://w3id.org/roh#correspondingOrganization"/>
         <owl:inverseOf rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000017"/>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <rdfs:label xml:lang="en-us">corresponding Organization</rdfs:label>
         <rdfs:label xml:lang="de-de">entsprechende Organisation</rdfs:label>
     </owl:ObjectProperty>
@@ -224,6 +250,9 @@
 
     <owl:ObjectProperty rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000017">
         <rdfs:subPropertyOf rdf:resource="http://w3id.org/roh#correspondingOrganizationOf"/>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <rdfs:label xml:lang="en-us">corresponding Organization Of</rdfs:label>
         <rdfs:label xml:lang="de-de">entsprechende Organisation der</rdfs:label>
     </owl:ObjectProperty>
@@ -235,6 +264,9 @@
     <owl:ObjectProperty rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000018">
         <rdfs:subPropertyOf rdf:resource="http://vivoweb.org/ontology/core#dateTimeValue"/>
         <obo:IAO_0000115 xml:lang="en-us">The date in which a Justificacion has to be delivered.</obo:IAO_0000115>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <rdfs:label xml:lang="en-us">foreseen justification date</rdfs:label>
         <rdfs:label xml:lang="de-de">vorgesehenes Begründungsdatum</rdfs:label>
     </owl:ObjectProperty>
@@ -245,8 +277,12 @@
 
     <owl:ObjectProperty rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000019">
         <owl:inverseOf rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000024"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <obo:IAO_0000115 xml:lang="de-de">Diese Objekteigenschaft wird verwendet, um die Lizenz (vivo:License) einer bestimmten Instanz anzugeben.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en-us">This object property is used to specify the licence (vivo:License) of a given instance.</obo:IAO_0000115>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <rdfs:label xml:lang="en-us">has license</rdfs:label>
         <rdfs:label xml:lang="de-de">hat Lizenz</rdfs:label>
     </owl:ObjectProperty>
@@ -257,6 +293,9 @@
 
     <owl:ObjectProperty rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000020">
         <owl:inverseOf rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000023"/>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <rdfs:label xml:lang="en-us">has predecessor</rdfs:label>
         <rdfs:label xml:lang="de-de">hat Vorgänger</rdfs:label>
     </owl:ObjectProperty>
@@ -268,6 +307,9 @@
     <owl:ObjectProperty rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000021">
         <owl:inverseOf rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000029"/>
         <obo:IAO_0000115 xml:lang="en-us">A Project is categorized by different Project Classifications.</obo:IAO_0000115>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <rdfs:label xml:lang="en-us">has project categorization</rdfs:label>
         <rdfs:label xml:lang="de-de">hat Projektkategorisierung</rdfs:label>
     </owl:ObjectProperty>
@@ -279,6 +321,9 @@
     <owl:ObjectProperty rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000022">
         <owl:inverseOf rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000034"/>
         <obo:IAO_0000115 xml:lang="en-us">An Agent has a Role in a Relation.</obo:IAO_0000115>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <rdfs:label xml:lang="en-us">has role</rdfs:label>
         <rdfs:label xml:lang="de-de">hat rolle</rdfs:label>
     </owl:ObjectProperty>
@@ -288,7 +333,10 @@
     <!-- http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000023 -->
 
     <owl:ObjectProperty rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000023">
-        <rdfs:label xml:lang="en-us">has sucessor</rdfs:label>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="en-us">has successor</rdfs:label>
         <rdfs:label xml:lang="de-de">hat Nachfolger</rdfs:label>
     </owl:ObjectProperty>
     
@@ -297,10 +345,14 @@
     <!-- http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000024 -->
 
     <owl:ObjectProperty rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000024">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <obo:IAO_0000115 xml:lang="de-de">Diese Objekteigenschaft wird verwendet, um Instanzen durch eine bestimmte Lizenz (vivo:License) zu lizenzieren.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en-us">This object property is used to which instances are licensed by a given license (vivo:License).</obo:IAO_0000115>
-        <rdfs:label xml:lang="de-de">gestattet</rdfs:label>
-        <rdfs:label xml:lang="en-us">license</rdfs:label>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="en-us">licenses</rdfs:label>
+        <rdfs:label xml:lang="de-de">lienziert</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -313,6 +365,9 @@
         <owl:inverseOf rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000031"/>
         <obo:IAO_0000115 xml:lang="en-us">A core relation that holds between a part and its whole, that in this case is a Repository.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="de-de">Eine Kernbeziehung, die zwischen einem Teil und seinem Ganzen besteht, das in diesem Fall ein Repository ist.</obo:IAO_0000115>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <rdfs:label xml:lang="en-us">part of repository</rdfs:label>
         <rdfs:label xml:lang="de-de">teil des Repository.</rdfs:label>
     </owl:ObjectProperty>
@@ -326,6 +381,9 @@
         <rdfs:subPropertyOf rdf:resource="http://w3id.org/roh#partOfResearchResult"/>
         <owl:inverseOf rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000033"/>
         <obo:IAO_0000115 xml:lang="en-us">A core relation that holds between a part and its hole, that in this case is a Research.</obo:IAO_0000115>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <rdfs:label xml:lang="en-us">part of research result</rdfs:label>
         <rdfs:label xml:lang="de-de">teil eines Forschungsergebnisses</rdfs:label>
     </owl:ObjectProperty>
@@ -337,6 +395,9 @@
     <owl:ObjectProperty rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000027">
         <owl:inverseOf rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000028"/>
         <obo:IAO_0000115 xml:lang="en-us">Some entity producing some Thing.</obo:IAO_0000115>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <rdfs:label xml:lang="de-de">erzeugt von</rdfs:label>
         <rdfs:label xml:lang="en-us">produced by</rdfs:label>
     </owl:ObjectProperty>
@@ -347,6 +408,9 @@
 
     <owl:ObjectProperty rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000028">
         <obo:IAO_0000115 xml:lang="en-us">Some Thing producing some entity.</obo:IAO_0000115>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <rdfs:label xml:lang="de-de">erzeugt</rdfs:label>
         <rdfs:label xml:lang="en-us">produces</rdfs:label>
     </owl:ObjectProperty>
@@ -357,6 +421,9 @@
 
     <owl:ObjectProperty rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000029">
         <obo:IAO_0000115 xml:lang="en-us">A Project Classification which categorizes a Project.</obo:IAO_0000115>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <rdfs:label xml:lang="de-de">Projektkategorisierung von</rdfs:label>
         <rdfs:label xml:lang="en-us">project categorization of</rdfs:label>
     </owl:ObjectProperty>
@@ -367,6 +434,9 @@
 
     <owl:ObjectProperty rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000030">
         <obo:IAO_0000115>A project may be in a CLOSED, OPEN or in other future status that may be defined.</obo:IAO_0000115>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <rdfs:label xml:lang="de-de">Projekt-Status</rdfs:label>
         <rdfs:label xml:lang="en-us">project status</rdfs:label>
     </owl:ObjectProperty>
@@ -380,6 +450,9 @@
         <rdfs:subPropertyOf rdf:resource="http://w3id.org/roh#repositoryHasPart"/>
         <obo:IAO_0000115 xml:lang="en-us">A core relation that holds between a whole, that in this case is an Repository, and its part .</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="de-de">Eine Kernbeziehung, die zwischen einem Ganzen, in diesem Fall einem Repository, und seinem Teil besteht</obo:IAO_0000115>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <rdfs:label xml:lang="es">Repository hat Teil</rdfs:label>
         <rdfs:label xml:lang="en-us">repository has part</rdfs:label>
     </owl:ObjectProperty>
@@ -391,6 +464,9 @@
     <owl:ObjectProperty rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000032">
         <rdfs:subPropertyOf rdf:resource="http://w3id.org/roh#repositoryStatus"/>
         <obo:IAO_0000115 xml:lang="en-us">The status of a Repository (Closed or Open).</obo:IAO_0000115>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <rdfs:label xml:lang="es">estado del repositorio</rdfs:label>
         <rdfs:label xml:lang="en-us">repository status</rdfs:label>
     </owl:ObjectProperty>
@@ -402,7 +478,10 @@
     <owl:ObjectProperty rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000033">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
         <rdfs:subPropertyOf rdf:resource="http://w3id.org/roh#researchResultHasPart"/>
-        <obo:IAO_0000115 xml:lang="en-us">A core relation that holds between a whole, that in this case is an Research Object (roh:ResearchObject), and its part .</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en-us">A core relation that holds between a whole, that in this case is an Research Object, and its part .</obo:IAO_0000115>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <rdfs:label xml:lang="de-de">Forschungsergebnis hat als Teil</rdfs:label>
         <rdfs:label xml:lang="en-us">research result has part</rdfs:label>
     </owl:ObjectProperty>
@@ -413,6 +492,9 @@
 
     <owl:ObjectProperty rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000034">
         <obo:IAO_0000115 xml:lang="en-us">The Role held by an Agent in a Relationship.</obo:IAO_0000115>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <rdfs:label xml:lang="en-us">role of</rdfs:label>
         <rdfs:label xml:lang="de-de">rolle von</rdfs:label>
     </owl:ObjectProperty>
@@ -438,6 +520,9 @@
         <owl:inverseOf rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000043"/>
         <obo:IAO_0000115 xml:lang="en-us">A skos:Concept which is the knowledge area of some entity</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="de-de">Ein skos:Konzept, das den Wissensbereich einer Entität darstellt</obo:IAO_0000115>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <rdfs:label xml:lang="de-de">Wissensbereich der</rdfs:label>
         <rdfs:label xml:lang="en-us">knowledge area of</rdfs:label>
     </owl:ObjectProperty>
@@ -450,6 +535,9 @@
         <rdfs:subPropertyOf rdf:resource="http://w3id.org/roh#hasKnowledgeArea"/>
         <obo:IAO_0000115 xml:lang="de-de">Eine Entität, die sich auf ein Konzept bezieht</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en-us">Some entity related to a Concept</obo:IAO_0000115>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <rdfs:label xml:lang="en-us">has knowledge area</rdfs:label>
         <rdfs:label xml:lang="de-de">hat Wissensbereich</rdfs:label>
     </owl:ObjectProperty>
@@ -485,6 +573,9 @@
     <owl:ObjectProperty rdf:about="http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000045">
         <rdfs:subPropertyOf rdf:resource="http://w3id.org/roh#addresses"/>
         <owl:inverseOf rdf:resource="http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000046"/>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <rdfs:label xml:lang="en-us">addresses</rdfs:label>
         <rdfs:label xml:lang="de-de">adressiert</rdfs:label>
     </owl:ObjectProperty>
@@ -494,8 +585,38 @@
     <!-- http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000046 -->
 
     <owl:ObjectProperty rdf:about="http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000046">
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
         <rdfs:label xml:lang="en-us">addressed by</rdfs:label>
         <rdfs:label xml:lang="de-de">adressiert von</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000048 -->
+
+    <owl:ObjectProperty rdf:about="http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000048">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/roh#employs"/>
+        <owl:inverseOf rdf:resource="http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000049"/>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="de-de">Anwendet</rdfs:label>
+        <rdfs:label xml:lang="en-us">Employs</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000049 -->
+
+    <owl:ObjectProperty rdf:about="http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000049">
+        <owl:inverseOf rdf:resource="http://w3id.org/roh#employs"/>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <rdfs:label xml:lang="de-de">Anwendet in</rdfs:label>
+        <rdfs:label xml:lang="en-us">Employed in</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -527,6 +648,12 @@
     <!-- http://w3id.org/roh#correspondingOrganizationOf -->
 
     <owl:ObjectProperty rdf:about="http://w3id.org/roh#correspondingOrganizationOf"/>
+    
+
+
+    <!-- http://w3id.org/roh#employs -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/roh#employs"/>
     
 
 
