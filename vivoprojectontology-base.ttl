@@ -7,7 +7,7 @@
 @base <http://vivoweb.org/ontology/core/vivoprojectontology/vivoprojectontology-base.ttl> .
 
 <http://vivoweb.org/ontology/core/vivoprojectontology/vivoprojectontology-base.ttl> rdf:type owl:Ontology ;
-                                                                                     owl:versionIRI <http://vivoweb.org/ontology/core/vivoprojectontology/releases/2023-05-10/vivoprojectontology-base.ttl> ;
+                                                                                     owl:versionIRI <http://vivoweb.org/ontology/core/vivoprojectontology/releases/2023-05-23/vivoprojectontology-base.ttl> ;
                                                                                      <http://purl.org/dc/elements/1.1/type> <http://purl.obolibrary.org/obo/IAO_8000001> ;
                                                                                      <http://purl.org/dc/terms/creator> "Rolf Guescini" ;
                                                                                      <http://purl.org/dc/terms/description> "Diese Ontologie beschreibt die Projektentität und ihre Eigenschaften und Beschränkungen für die Verwendung in der VIVO-Anwendung"@de-de ,
@@ -17,7 +17,7 @@
                                                                                                                       "VIVO Projektontologie"@de-de ;
                                                                                      rdfs:label "VIVO Project Ontology"@en-us ,
                                                                                                 "VIVO Projektontologie"@de-de ;
-                                                                                     owl:versionInfo "2023-05-10"^^xsd:string .
+                                                                                     owl:versionInfo "2023-05-23"^^xsd:string .
 
 #################################################################
 #    Annotation properties
@@ -124,6 +124,10 @@ owl:maxCardinality rdf:type owl:AnnotationProperty .
 <http://purl.obolibrary.org/obo/BFO_0000051> rdf:type owl:ObjectProperty .
 
 
+###  http://purl.org/ontology/bibo/authorList
+<http://purl.org/ontology/bibo/authorList> rdf:type owl:ObjectProperty .
+
+
 ###  http://purl.org/spar/cito/cites
 <http://purl.org/spar/cito/cites> rdf:type owl:ObjectProperty .
 
@@ -132,7 +136,9 @@ owl:maxCardinality rdf:type owl:AnnotationProperty .
 <http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000014> rdf:type owl:ObjectProperty ;
                                                                rdfs:subPropertyOf <http://w3id.org/roh#correspondingAuthor> ;
                                                                owl:inverseOf <http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000015> ;
-                                                               rdfs:range <http://xmlns.com/foaf/0.1/Person> ;
+                                                               rdfs:domain <http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000011> ;
+                                                               rdfs:range <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000053> ,
+                                                                          <http://xmlns.com/foaf/0.1/Person> ;
                                                                <http://purl.obolibrary.org/obo/IAO_0000115> "An object property linking an Entity to a Person, considered the author of such Thing."@en-us ,
                                                                                                             "Eine Objekteigenschaft, die eine Entität mit einer Person verbindet, die als Urheber dieser Sache gilt"@de-de ;
                                                                <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
@@ -145,7 +151,9 @@ owl:maxCardinality rdf:type owl:AnnotationProperty .
 ###  http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000015
 <http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000015> rdf:type owl:ObjectProperty ;
                                                                rdfs:subPropertyOf <http://w3id.org/roh#correspondingAuthorOf> ;
-                                                               rdfs:domain <http://xmlns.com/foaf/0.1/Person> ;
+                                                               rdfs:domain <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000053> ,
+                                                                           <http://xmlns.com/foaf/0.1/Person> ;
+                                                               rdfs:range <http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000011> ;
                                                                <http://purl.obolibrary.org/obo/IAO_0000115> "An object property linking a Person with a Thing, such person is corresponding author for."@en-us ,
                                                                                                             "Eine Objekteigenschaft, die eine Person mit einer Sache verknüpft, diese Person ist der entsprechende Autor für"@de-de ;
                                                                <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
@@ -209,6 +217,8 @@ owl:maxCardinality rdf:type owl:AnnotationProperty .
 <http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000020> rdf:type owl:ObjectProperty ;
                                                                rdfs:subPropertyOf owl:topObjectProperty ;
                                                                owl:inverseOf <http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000023> ;
+                                                               rdfs:domain <http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000012> ;
+                                                               rdfs:range <http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000012> ;
                                                                <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
                                                                <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
                                                                <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
@@ -251,6 +261,8 @@ owl:maxCardinality rdf:type owl:AnnotationProperty .
 
 ###  http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000023
 <http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000023> rdf:type owl:ObjectProperty ;
+                                                               rdfs:domain <http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000012> ;
+                                                               rdfs:range <http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000012> ;
                                                                <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
                                                                <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
                                                                <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
@@ -294,8 +306,7 @@ owl:maxCardinality rdf:type owl:AnnotationProperty .
 
 ###  http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000026
 <http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000026> rdf:type owl:ObjectProperty ;
-                                                               rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000050> ,
-                                                                                  <http://w3id.org/roh#partOfResearchResult> ;
+                                                               rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000050> ;
                                                                owl:inverseOf <http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000033> ;
                                                                rdfs:domain [ rdf:type owl:Class ;
                                                                              owl:unionOf ( <http://purl.obolibrary.org/obo/ERO_0000071>
@@ -572,6 +583,22 @@ owl:maxCardinality rdf:type owl:AnnotationProperty .
                                                                           "Employed in"@en-us .
 
 
+###  http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000056
+<http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000056> rdf:type owl:ObjectProperty ;
+                                                               rdfs:subPropertyOf <http://purl.org/ontology/bibo/authorList> ;
+                                                               rdfs:domain <http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000011> ;
+                                                               rdfs:range <http://purl.org/co/List> ;
+                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#offerCreateNewOptionAnnot> "true"^^xsd:boolean ;
+                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#selectFromExistingAnnot> "true"^^xsd:boolean ;
+                                                               rdfs:comment "An ordered list of authors. Normally, this list is seen as a priority list that order authors by importance"@en-us ,
+                                                                            "Eine geordnete Autorenliste. Normalerweise wird diese Liste als Prioritätenliste angesehen, die die Autoren nach Wichtigkeit sortiert"@de-de ;
+                                                               rdfs:label "Author list"@en-us ,
+                                                                          "Autorenliste"@de-de .
+
+
 ###  http://w3id.org/roh#addresses
 <http://w3id.org/roh#addresses> rdf:type owl:ObjectProperty .
 
@@ -609,7 +636,14 @@ owl:maxCardinality rdf:type owl:AnnotationProperty .
 
 
 ###  http://w3id.org/roh#partOfResearchResult
-<http://w3id.org/roh#partOfResearchResult> rdf:type owl:ObjectProperty .
+<http://w3id.org/roh#partOfResearchResult> rdf:type owl:ObjectProperty ;
+                                           rdfs:domain [ rdf:type owl:Class ;
+                                                         owl:unionOf ( <http://purl.obolibrary.org/obo/ERO_0000071>
+                                                                       <http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000001>
+                                                                       <http://w3id.org/roh/mirror/bibo#Document>
+                                                                     )
+                                                       ] ;
+                                           rdfs:range <http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000012> .
 
 
 ###  http://w3id.org/roh#repositoryHasPart
@@ -626,10 +660,6 @@ owl:maxCardinality rdf:type owl:AnnotationProperty .
 
 ###  http://w3id.org/roh#seqOfAuthors
 <http://w3id.org/roh#seqOfAuthors> rdf:type owl:ObjectProperty .
-
-
-###  http://w3id.org/roh/mirror/bibo#AuthorList
-<http://w3id.org/roh/mirror/bibo#AuthorList> rdf:type owl:ObjectProperty .
 
 
 ###  http://www.w3.org/2004/02/skos/core#inScheme
@@ -746,6 +776,10 @@ owl:maxCardinality rdf:type owl:AnnotationProperty .
 <http://purl.org/co/List> rdf:type owl:Class .
 
 
+###  http://purl.org/ontology/bibo/Webpage
+<http://purl.org/ontology/bibo/Webpage> rdf:type owl:Class .
+
+
 ###  http://vivoweb.org/ontology/core#DateTimeInterval
 <http://vivoweb.org/ontology/core#DateTimeInterval> rdf:type owl:Class .
 
@@ -776,7 +810,7 @@ owl:maxCardinality rdf:type owl:AnnotationProperty .
 <http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000000> rdf:type owl:Class ;
                                                                rdfs:subClassOf <http://purl.obolibrary.org/obo/Process> ,
                                                                                <http://vivoweb.org/ontology/core#Project> ,
-                                                                               <http://xmlns.com/foaf/0.1/Agent> ,
+                                                                               <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000053> ,
                                                                                [ rdf:type owl:Restriction ;
                                                                                  owl:onProperty <http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000030> ;
                                                                                  owl:someValuesFrom [ rdf:type owl:Class ;
@@ -817,10 +851,6 @@ owl:maxCardinality rdf:type owl:AnnotationProperty .
                                                                                                                         ) ;
                                                                                                      rdf:type owl:Class
                                                                                                    ]
-                                                                               ] ,
-                                                                               [ rdf:type owl:Restriction ;
-                                                                                 owl:onProperty <http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000028> ;
-                                                                                 owl:allValuesFrom <http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000011>
                                                                                ] ,
                                                                                [ rdf:type owl:Restriction ;
                                                                                  owl:onProperty <http://vivoweb.org/ontology/core#relates> ;
@@ -898,7 +928,7 @@ owl:maxCardinality rdf:type owl:AnnotationProperty .
                                                                                ] ,
                                                                                [ rdf:type owl:Restriction ;
                                                                                  owl:onProperty <http://xmlns.com/foaf/0.1/homepage> ;
-                                                                                 owl:allValuesFrom <http://w3id.org/roh/mirror/bibo#Webpage>
+                                                                                 owl:allValuesFrom <http://purl.org/ontology/bibo/Webpage>
                                                                                ] ,
                                                                                [ rdf:type owl:Restriction ;
                                                                                  owl:onProperty <http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000035> ;
@@ -1054,7 +1084,7 @@ owl:maxCardinality rdf:type owl:AnnotationProperty .
                                                                                ] ,
                                                                                [ rdf:type owl:Restriction ;
                                                                                  owl:onProperty <http://xmlns.com/foaf/0.1/homepage> ;
-                                                                                 owl:allValuesFrom <http://w3id.org/roh/mirror/bibo#Webpage>
+                                                                                 owl:allValuesFrom <http://purl.org/ontology/bibo/Webpage>
                                                                                ] ,
                                                                                [ rdf:type owl:Restriction ;
                                                                                  owl:onProperty <http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000035> ;
@@ -1092,12 +1122,11 @@ owl:maxCardinality rdf:type owl:AnnotationProperty .
                                                                                                    ]
                                                                                                    [ rdf:type owl:Restriction ;
                                                                                                      owl:onProperty <http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000027> ;
-                                                                                                     owl:allValuesFrom <http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000000>
+                                                                                                     owl:allValuesFrom <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000053>
                                                                                                    ]
                                                                                                  )
                                                                                    ] ;
-                                                               rdfs:subClassOf <http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000012> ,
-                                                                               <http://w3id.org/roh#ResearchObject> ;
+                                                               rdfs:subClassOf <http://w3id.org/roh#ResearchObject> ;
                                                                <http://purl.obolibrary.org/obo/IAO_0000115> "A roh:ResearchObject is generated by one to several foaf:Person specified through property bibo:authorList. Usually a roh:ResearchObject results from the work in a vivo:Project (roh:produces). An elaborated taxonomy of research objects is provided, covering all types of publications, Patents, Software and Webpage. The main author of a research object is accessible through property roh:correspondingAuthor."@en-us ;
                                                                <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
                                                                <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
@@ -1117,6 +1146,10 @@ owl:maxCardinality rdf:type owl:AnnotationProperty .
                                                                                [ rdf:type owl:Restriction ;
                                                                                  owl:onProperty <http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000035> ;
                                                                                  owl:someValuesFrom <http://purl.org/co/List>
+                                                                               ] ,
+                                                                               [ rdf:type owl:Restriction ;
+                                                                                 owl:onProperty <http://purl.org/ontology/bibo/authorList> ;
+                                                                                 owl:allValuesFrom <http://purl.org/co/List>
                                                                                ] ,
                                                                                [ rdf:type owl:Restriction ;
                                                                                  owl:onProperty <http://purl.org/spar/cito/cites> ;
@@ -1150,12 +1183,8 @@ owl:maxCardinality rdf:type owl:AnnotationProperty .
                                                                                                    ]
                                                                                ] ,
                                                                                [ rdf:type owl:Restriction ;
-                                                                                 owl:onProperty <http://w3id.org/roh/mirror/bibo#AuthorList> ;
-                                                                                 owl:allValuesFrom <http://purl.org/co/List>
-                                                                               ] ,
-                                                                               [ rdf:type owl:Restriction ;
                                                                                  owl:onProperty <http://xmlns.com/foaf/0.1/homepage> ;
-                                                                                 owl:allValuesFrom <http://w3id.org/roh/mirror/bibo#Webpage>
+                                                                                 owl:allValuesFrom <http://purl.org/ontology/bibo/Webpage>
                                                                                ] ,
                                                                                [ rdf:type owl:Restriction ;
                                                                                  owl:onProperty <http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000039> ;
@@ -1216,6 +1245,46 @@ owl:maxCardinality rdf:type owl:AnnotationProperty .
                                                                           "Research Method"@en-us .
 
 
+###  http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000053
+<http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000053> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent> ,
+                                                                               [ rdf:type owl:Restriction ;
+                                                                                 owl:onProperty <http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000028> ;
+                                                                                 owl:allValuesFrom <http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000011>
+                                                                               ] ;
+                                                               <http://purl.obolibrary.org/obo/IAO_0000115> "Der Erzeuger von Forschungsergebnisse ist eine Unterklasse von foaf:Agent und ist ein Ding, das Forschungsergebnisse produziert"@de-de ,
+                                                                                                            "The Research Output producing agent is a subclass of foaf:Agent, and is a Thing that produces Research Outputs"@en-us ;
+                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                               rdfs:label "Erzeuger von Forschungsergebnissen"@de-de ,
+                                                                          "Research output producing agent"@en-us .
+
+
+###  http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000054
+<http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000054> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://w3id.org/roh#KnowledgeArea> ;
+                                                               <http://purl.obolibrary.org/obo/IAO_0000115> "Forschungsfeldklassifikation zur Unterstützung einer differenzierten Abbildung interdisziplinärer bzw. gegenstands- oder problembezogener Forschung"@de-de ,
+                                                                                                            "Research field classification to support a differentiated mapping of interdisciplinary or subject- or problem-related research."@en-us ;
+                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                               rdfs:label "Interdisciplinary research field"@en-us ,
+                                                                          "Interdisziplinäre Forschungsfeld"@de-de .
+
+
+###  http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000055
+<http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000055> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://w3id.org/roh#KnowledgeArea> ;
+                                                               <http://purl.obolibrary.org/obo/IAO_0000115> "Classification of research areas to support the assignment of disciplines to topic- or problem-related research"@en-us ,
+                                                                                                            "Klassifizierung von Forschungsbereichen zur Unterstützung der Zuordnung von Disziplinen zur themen- oder problembezogenen Forschung"@de-de ;
+                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                               rdfs:label "Disciplinary research field"@en-us ,
+                                                                          "Disziplinäres Forschungsfeld"@de-de .
+
+
 ###  http://w3id.org/roh#ExperimentalProtocol
 <http://w3id.org/roh#ExperimentalProtocol> rdf:type owl:Class .
 
@@ -1234,8 +1303,7 @@ owl:maxCardinality rdf:type owl:AnnotationProperty .
 
 
 ###  http://w3id.org/roh#ResearchObject
-<http://w3id.org/roh#ResearchObject> rdf:type owl:Class ;
-                                     rdfs:subClassOf <http://w3id.org/roh#ResearchResult> .
+<http://w3id.org/roh#ResearchObject> rdf:type owl:Class .
 
 
 ###  http://w3id.org/roh#ResearchResult
@@ -1244,10 +1312,6 @@ owl:maxCardinality rdf:type owl:AnnotationProperty .
 
 ###  http://w3id.org/roh/mirror/bibo#Document
 <http://w3id.org/roh/mirror/bibo#Document> rdf:type owl:Class .
-
-
-###  http://w3id.org/roh/mirror/bibo#Webpage
-<http://w3id.org/roh/mirror/bibo#Webpage> rdf:type owl:Class .
 
 
 ###  http://w3id.org/roh/mirror/obo/bfo#BFO_0000015
@@ -1283,18 +1347,20 @@ owl:maxCardinality rdf:type owl:AnnotationProperty .
 #################################################################
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( <http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000004>
-                <http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000005>
-                <http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000007>
-                <http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000008>
+  owl:members ( <http://vivoweb.org/ontology/core#KnowledgeArea>
+                <http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000006>
+                <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000044>
+                <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000054>
+                <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000055>
               )
 ] .
 
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( <http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000006>
-                <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000044>
-                <http://w3id.org/roh#KnowledgeArea>
+  owl:members ( <http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000004>
+                <http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000005>
+                <http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000007>
+                <http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000008>
               )
 ] .
 

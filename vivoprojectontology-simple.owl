@@ -11,7 +11,7 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:vitro="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#">
     <owl:Ontology rdf:about="http://vivoweb.org/ontology/core/vivoprojectontology/vivoprojectontology-simple.owl">
-        <owl:versionIRI rdf:resource="http://vivoweb.org/ontology/core/vivoprojectontology/releases/2023-05-10/vivoprojectontology-simple.owl"/>
+        <owl:versionIRI rdf:resource="http://vivoweb.org/ontology/core/vivoprojectontology/releases/2023-05-23/vivoprojectontology-simple.owl"/>
         <terms:creator>Rolf Guescini</terms:creator>
         <terms:description xml:lang="de-de">Diese Ontologie beschreibt die Projektentität und ihre Eigenschaften und Beschränkungen für die Verwendung in der VIVO-Anwendung</terms:description>
         <terms:description xml:lang="en-us">This ontology describes the project entity and its properties and restraints for use in the VIVO application</terms:description>
@@ -20,7 +20,7 @@
         <terms:title xml:lang="de-de">VIVO Projektontologie</terms:title>
         <rdfs:label xml:lang="en-us">VIVO Project Ontology</rdfs:label>
         <rdfs:label xml:lang="de-de">VIVO Projektontologie</rdfs:label>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-05-10</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-05-23</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -192,6 +192,12 @@
     <!-- http://purl.obolibrary.org/obo/BFO_0000051 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000051"/>
+    
+
+
+    <!-- http://purl.org/ontology/bibo/authorList -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/bibo/authorList"/>
     
 
 
@@ -378,7 +384,6 @@
 
     <owl:ObjectProperty rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000026">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-        <rdfs:subPropertyOf rdf:resource="http://w3id.org/roh#partOfResearchResult"/>
         <owl:inverseOf rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000033"/>
         <obo:IAO_0000115 xml:lang="en-us">A core relation that holds between a part and its hole, that in this case is a Research.</obo:IAO_0000115>
         <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
@@ -621,6 +626,23 @@
     
 
 
+    <!-- http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000056 -->
+
+    <owl:ObjectProperty rdf:about="http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000056">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/bibo/authorList"/>
+        <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:offerCreateNewOptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:offerCreateNewOptionAnnot>
+        <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+        <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vitro:selectFromExistingAnnot>
+        <rdfs:comment xml:lang="en-us">An ordered list of authors. Normally, this list is seen as a priority list that order authors by importance</rdfs:comment>
+        <rdfs:comment xml:lang="de-de">Eine geordnete Autorenliste. Normalerweise wird diese Liste als Prioritätenliste angesehen, die die Autoren nach Wichtigkeit sortiert</rdfs:comment>
+        <rdfs:label xml:lang="en-us">Author list</rdfs:label>
+        <rdfs:label xml:lang="de-de">Autorenliste</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://w3id.org/roh#addresses -->
 
     <owl:ObjectProperty rdf:about="http://w3id.org/roh#addresses"/>
@@ -702,12 +724,6 @@
     <!-- http://w3id.org/roh#seqOfAuthors -->
 
     <owl:ObjectProperty rdf:about="http://w3id.org/roh#seqOfAuthors"/>
-    
-
-
-    <!-- http://w3id.org/roh/mirror/bibo#AuthorList -->
-
-    <owl:ObjectProperty rdf:about="http://w3id.org/roh/mirror/bibo#AuthorList"/>
     
 
 

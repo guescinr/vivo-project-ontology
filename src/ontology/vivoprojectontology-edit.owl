@@ -614,6 +614,7 @@ AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot vivo:VIVOPROJE
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000000 "Project"@en-us)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000000 "Projekt"@de-de)
 SubClassOf(vivo:VIVOPROJECTONTOLOGY_0000000 obo:Process)
+SubClassOf(vivo:VIVOPROJECTONTOLOGY_0000000 vivo:Project)
 SubClassOf(vivo:VIVOPROJECTONTOLOGY_0000000 <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000053>)
 SubClassOf(vivo:VIVOPROJECTONTOLOGY_0000000 ObjectSomeValuesFrom(vivo:VIVOPROJECTONTOLOGY_0000030 ObjectUnionOf(vivo:VIVOPROJECTONTOLOGY_0000004 vivo:VIVOPROJECTONTOLOGY_0000005 vivo:VIVOPROJECTONTOLOGY_0000007 vivo:VIVOPROJECTONTOLOGY_0000008)))
 SubClassOf(vivo:VIVOPROJECTONTOLOGY_0000000 ObjectSomeValuesFrom(vivo:dateTimeInterval vivo:DateTimeInterval))
@@ -759,7 +760,6 @@ AnnotationAssertion(vitro:prohibitedFromUpdateBelowRoleLevelAnnot vivo:VIVOPROJE
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000011 "Forschungsgegenstand"@de-de)
 AnnotationAssertion(rdfs:label vivo:VIVOPROJECTONTOLOGY_0000011 "Research Object"@en-us)
 EquivalentClasses(vivo:VIVOPROJECTONTOLOGY_0000011 ObjectUnionOf(ObjectSomeValuesFrom(vivo:VIVOPROJECTONTOLOGY_0000026 vivo:VIVOPROJECTONTOLOGY_0000012) ObjectAllValuesFrom(vivo:VIVOPROJECTONTOLOGY_0000027 <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000053>)))
-SubClassOf(vivo:VIVOPROJECTONTOLOGY_0000011 vivo:VIVOPROJECTONTOLOGY_0000012)
 SubClassOf(vivo:VIVOPROJECTONTOLOGY_0000011 roh:ResearchObject)
 
 # Class: vivo:VIVOPROJECTONTOLOGY_0000012 (Forschungsergebnis)
@@ -852,10 +852,6 @@ SubClassOf(<http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000055> roh:Kn
 # Class: roh:KnowledgeArea (roh:KnowledgeArea)
 
 SubClassOf(roh:KnowledgeArea skos:Concept)
-
-# Class: roh:ResearchObject (roh:ResearchObject)
-
-SubClassOf(roh:ResearchObject roh:ResearchResult)
 
 
 DisjointClasses(vivo:KnowledgeArea vivo:VIVOPROJECTONTOLOGY_0000006 <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000044> <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000054> <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000055>)
