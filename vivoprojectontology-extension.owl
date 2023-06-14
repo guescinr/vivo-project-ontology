@@ -1,0 +1,243 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://vivoweb.org/ontology/core/vivoprojectontology.owl#"
+     xml:base="http://vivoweb.org/ontology/core/vivoprojectontology.owl"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:vitro="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#">
+    <owl:Ontology rdf:about="http://vivoweb.org/ontology/core/vivoprojectontology.owl">
+        <owl:versionIRI rdf:resource="http://vivoweb.org/ontology/core/vivoprojectontology/releases/2023-05-23/vivoprojectontology.owl"/>
+        <terms:creator>Rolf Guescini</terms:creator>
+        <terms:description xml:lang="de-de">Diese Ontologie beschreibt die Projektentität und ihre Eigenschaften und Beschränkungen für die Verwendung in der VIVO-Anwendung</terms:description>
+        <terms:description xml:lang="en-us">This ontology describes the project entity and its properties and restraints for use in the VIVO application</terms:description>
+        <terms:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <terms:title xml:lang="en-us">VIVO Project ontology</terms:title>
+        <terms:title xml:lang="de-de">VIVO Projektontologie</terms:title>
+        <vitro:ontologyPrefixAnnot>vivo-project</vitro:ontologyPrefixAnnot>
+        <rdfs:label xml:lang="en-us">VIVO Project Ontology</rdfs:label>
+        <rdfs:label xml:lang="de-de">VIVO Projektontologie</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-05-23</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000112 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000112"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator">
+        <rdfs:label>creator</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description">
+        <rdfs:label>description</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license">
+        <rdfs:label>license</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/source -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/source">
+        <rdfs:label>source</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title">
+        <rdfs:label>title</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://vitro.mannlib.cornell.edu/ns/vitro/0.7#descriptionAnnot -->
+
+    <owl:AnnotationProperty rdf:about="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#descriptionAnnot"/>
+    
+
+
+    <!-- http://vitro.mannlib.cornell.edu/ns/vitro/0.7#displayRankAnnot -->
+
+    <owl:AnnotationProperty rdf:about="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#displayRankAnnot"/>
+    
+
+
+    <!-- http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot -->
+
+    <owl:AnnotationProperty rdf:about="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot"/>
+    
+
+
+    <!-- http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot -->
+
+    <owl:AnnotationProperty rdf:about="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot"/>
+    
+
+
+    <!-- http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup -->
+
+    <owl:AnnotationProperty rdf:about="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inClassGroup"/>
+    
+
+
+    <!-- http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot -->
+
+    <owl:AnnotationProperty rdf:about="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#inPropertyGroupAnnot"/>
+    
+
+
+    <!-- http://vitro.mannlib.cornell.edu/ns/vitro/0.7#offerCreateNewOptionAnnot -->
+
+    <owl:AnnotationProperty rdf:about="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#offerCreateNewOptionAnnot"/>
+    
+
+
+    <!-- http://vitro.mannlib.cornell.edu/ns/vitro/0.7#ontologyPrefixAnnot -->
+
+    <owl:AnnotationProperty rdf:about="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#ontologyPrefixAnnot"/>
+    
+
+
+    <!-- http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot -->
+
+    <owl:AnnotationProperty rdf:about="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot"/>
+    
+
+
+    <!-- http://vitro.mannlib.cornell.edu/ns/vitro/0.7#publicDescriptionAnnot -->
+
+    <owl:AnnotationProperty rdf:about="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#publicDescriptionAnnot"/>
+    
+
+
+    <!-- http://vitro.mannlib.cornell.edu/ns/vitro/0.7#selectFromExistingAnnot -->
+
+    <owl:AnnotationProperty rdf:about="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#selectFromExistingAnnot"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#maxCardinality -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#maxCardinality"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000013 -->
+
+    <owl:Class rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000013"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000004 -->
+
+    <owl:NamedIndividual rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000004">
+        <owl:topDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"></owl:topDataProperty>
+        <rdfs:label xml:lang="de-de">Ausstehend</rdfs:label>
+        <rdfs:label xml:lang="en-us">Open</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000005 -->
+
+    <owl:NamedIndividual rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000005">
+        <rdf:type rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000013"/>
+        <owl:topDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"></owl:topDataProperty>
+        <rdfs:label xml:lang="de-de">Abgeschlossen</rdfs:label>
+        <rdfs:label xml:lang="en-us">Closed</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000007 -->
+
+    <owl:NamedIndividual rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000007">
+        <rdf:type rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000013"/>
+        <owl:topDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"></owl:topDataProperty>
+        <rdfs:label xml:lang="de-de">Antrag eingereicht</rdfs:label>
+        <rdfs:label xml:lang="en-us">Proposal submitted</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core/vivoprojectontology.owl#VIVOPROJECTONTOLOGY_0000059 -->
+
+    <owl:NamedIndividual rdf:about="http://vivoweb.org/ontology/core/vivoprojectontology.owl#VIVOPROJECTONTOLOGY_0000059">
+        <rdf:type rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000013"/>
+        <owl:topDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"></owl:topDataProperty>
+        <rdfs:label xml:lang="de-de">Abgelehnt</rdfs:label>
+        <rdfs:label xml:lang="en-us">Rejected</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
