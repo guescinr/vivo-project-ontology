@@ -25,6 +25,7 @@ Annotation(dcterms:description "This ontology describes the project entity and i
 Annotation(dcterms:license <http://creativecommons.org/licenses/by/4.0/>)
 Annotation(dcterms:title "VIVO Project ontology"@en-us)
 Annotation(dcterms:title "VIVO Projektontologie"@de-de)
+Annotation(vitro:ontologyPrefixAnnot "vivo-project")
 Annotation(rdfs:label "VIVO Project Ontology"@en-us)
 Annotation(rdfs:label "VIVO Projektontologie"@de-de)
 
@@ -187,7 +188,7 @@ AnnotationAssertion(rdfs:label dcterms:title "title")
 #   Object Properties
 ############################
 
-# Object Property: vivo:VIVOPROJECTONTOLOGY_0000014 (corresponding author)
+# Object Property: vivo:VIVOPROJECTONTOLOGY_0000014 (entsprechender Autor)
 
 AnnotationAssertion(obo:IAO_0000115 vivo:VIVOPROJECTONTOLOGY_0000014 "An object property linking an Entity to a Person, considered the author of such Thing."@en-us)
 AnnotationAssertion(obo:IAO_0000115 vivo:VIVOPROJECTONTOLOGY_0000014 "Eine Objekteigenschaft, die eine Entität mit einer Person verbindet, die als Urheber dieser Sache gilt"@de-de)
