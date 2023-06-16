@@ -10,7 +10,7 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:vitro="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#">
-    <owl:Ontology rdf:about="http://vivoweb.org/ontology/core/vivoprojectontology.owl">
+    <owl:Ontology rdf:about="http://vivoweb.org/ontology/core/vivoprojectontology#">
         <owl:versionIRI rdf:resource="http://vivoweb.org/ontology/core/vivoprojectontology/releases/2023-05-23/vivoprojectontology.owl"/>
         <terms:creator>Rolf Guescini</terms:creator>
         <terms:description xml:lang="de-de">Diese Ontologie beschreibt die Projektentität und ihre Eigenschaften und Beschränkungen für die Verwendung in der VIVO-Anwendung</terms:description>
@@ -198,6 +198,7 @@
     <!-- http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000004 -->
 
     <owl:NamedIndividual rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000004">
+        <rdf:type rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000013"/>
         <owl:topDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"></owl:topDataProperty>
         <rdfs:label xml:lang="de-de">Ausstehend</rdfs:label>
         <rdfs:label xml:lang="en-us">Open</rdfs:label>

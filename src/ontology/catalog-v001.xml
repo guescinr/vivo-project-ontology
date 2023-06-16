@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-<group id="Folder Repository, directory=, recursive=false, Auto-Update=false, version=2" prefer="public" xml:base="">
-
-  
-
-
-  
-
-</group>
+    <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/collections-ontology/releases/2023-06-16/collections-ontology.owl" uri="https://raw.githubusercontent.com/guescinr/collections-ontology/main/collections-ontology.owl"/>
+    <group id="Folder Repository, directory=, recursive=false, Auto-Update=false, version=2" prefer="public" xml:base=""/>
 </catalog>

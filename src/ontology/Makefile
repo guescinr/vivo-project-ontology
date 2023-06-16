@@ -15,7 +15,7 @@
 # ----------------------------------------
 # these can be overwritten on the command line
 
-URIBASE=                    http://vivoweb.org/ontology/core#
+URIBASE=                    http://vivoweb.org/ontology/core/vivoprojectontology#
 ONT=                        vivoprojectontology
 ONTBASE=                    $(URIBASE)/$(ONT)
 EDIT_FORMAT=                owl
@@ -348,7 +348,7 @@ $(ONT)-full.ttl: $(ONT)-full.owl
 		convert --check false -f ttl -o $@.tmp.ttl && mv $@.tmp.ttl $@
 $(ONT)-simple.ttl: $(ONT)-simple.owl
 	$(ROBOT) annotate --input $< --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
-		convert --check false -f ttl -o $@.tmp.ttl && mv $@.tmp.ttl $@
+		convert --check true -f ttl -o $@.tmp.ttl && mv $@.tmp.ttl $@
 # ----------------------------------------
 # Release artefacts: main release artefacts
 # ----------------------------------------

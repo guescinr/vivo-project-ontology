@@ -1,22 +1,23 @@
-@prefix : <http://vivoweb.org/ontology/core/vivoprojectontology/vivoprojectontology-simple.ttl#> .
+@prefix : <http://vivoweb.org/ontology/core/vivoprojectontology/vivoprojectontology/vivoprojectontology-simple.ttl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://vivoweb.org/ontology/core/vivoprojectontology/vivoprojectontology-simple.ttl> .
+@base <http://vivoweb.org/ontology/core/vivoprojectontology/vivoprojectontology/vivoprojectontology-simple.ttl> .
 
-<http://vivoweb.org/ontology/core/vivoprojectontology/vivoprojectontology-simple.ttl> rdf:type owl:Ontology ;
-                                                                                       owl:versionIRI <http://vivoweb.org/ontology/core/vivoprojectontology/releases/2023-05-23/vivoprojectontology-simple.ttl> ;
-                                                                                       <http://purl.org/dc/terms/creator> "Rolf Guescini" ;
-                                                                                       <http://purl.org/dc/terms/description> "Diese Ontologie beschreibt die Projektentität und ihre Eigenschaften und Beschränkungen für die Verwendung in der VIVO-Anwendung"@de-de ,
-                                                                                                                              "This ontology describes the project entity and its properties and restraints for use in the VIVO application"@en-us ;
-                                                                                       <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/4.0/> ;
-                                                                                       <http://purl.org/dc/terms/title> "VIVO Project ontology"@en-us ,
-                                                                                                                        "VIVO Projektontologie"@de-de ;
-                                                                                       rdfs:label "VIVO Project Ontology"@en-us ,
-                                                                                                  "VIVO Projektontologie"@de-de ;
-                                                                                       owl:versionInfo "2023-05-23"^^xsd:string .
+<http://vivoweb.org/ontology/core/vivoprojectontology/vivoprojectontology/vivoprojectontology-simple.ttl> rdf:type owl:Ontology ;
+                                                                                                           owl:versionIRI <http://vivoweb.org/ontology/core/vivoprojectontology/vivoprojectontology/releases/2023-06-16/vivoprojectontology-simple.ttl> ;
+                                                                                                           <http://purl.org/dc/terms/creator> "Rolf Guescini" ;
+                                                                                                           <http://purl.org/dc/terms/description> "Diese Ontologie beschreibt die Projektentität und ihre Eigenschaften und Beschränkungen für die Verwendung in der VIVO-Anwendung"@de-de ,
+                                                                                                                                                  "This ontology describes the project entity and its properties and restraints for use in the VIVO application"@en-us ;
+                                                                                                           <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/4.0/> ;
+                                                                                                           <http://purl.org/dc/terms/title> "VIVO Project ontology"@en-us ,
+                                                                                                                                            "VIVO Projektontologie"@de-de ;
+                                                                                                           <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#ontologyPrefixAnnot> "vivo-project" ;
+                                                                                                           rdfs:label "VIVO Project Ontology"@en-us ,
+                                                                                                                      "VIVO Projektontologie"@de-de ;
+                                                                                                           owl:versionInfo "2023-06-16"^^xsd:string .
 
 #################################################################
 #    Annotation properties
@@ -131,276 +132,6 @@ owl:maxCardinality rdf:type owl:AnnotationProperty .
 <http://purl.org/spar/cito/cites> rdf:type owl:ObjectProperty .
 
 
-###  http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000014
-<http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000014> rdf:type owl:ObjectProperty ;
-                                                               rdfs:subPropertyOf <http://w3id.org/roh#correspondingAuthor> ;
-                                                               owl:inverseOf <http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000015> ;
-                                                               <http://purl.obolibrary.org/obo/IAO_0000115> "An object property linking an Entity to a Person, considered the author of such Thing."@en-us ,
-                                                                                                            "Eine Objekteigenschaft, die eine Entität mit einer Person verbindet, die als Urheber dieser Sache gilt"@de-de ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               rdfs:label "corresponding author"@en-us ,
-                                                                          "entsprechender Autor"@de-de .
-
-
-###  http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000015
-<http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000015> rdf:type owl:ObjectProperty ;
-                                                               rdfs:subPropertyOf <http://w3id.org/roh#correspondingAuthorOf> ;
-                                                               <http://purl.obolibrary.org/obo/IAO_0000115> "An object property linking a Person with a Thing, such person is corresponding author for."@en-us ,
-                                                                                                            "Eine Objekteigenschaft, die eine Person mit einer Sache verknüpft, diese Person ist der entsprechende Autor für"@de-de ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               rdfs:label "corresponding author of"@en-us ,
-                                                                          "entsprechender Autor von"@de-de .
-
-
-###  http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000016
-<http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000016> rdf:type owl:ObjectProperty ;
-                                                               rdfs:subPropertyOf <http://w3id.org/roh#correspondingOrganization> ;
-                                                               owl:inverseOf <http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000017> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               rdfs:label "corresponding Organization"@en-us ,
-                                                                          "entsprechende Organisation"@de-de .
-
-
-###  http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000017
-<http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000017> rdf:type owl:ObjectProperty ;
-                                                               rdfs:subPropertyOf <http://w3id.org/roh#correspondingOrganizationOf> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               rdfs:label "corresponding Organization Of"@en-us ,
-                                                                          "entsprechende Organisation der"@de-de .
-
-
-###  http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000018
-<http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000018> rdf:type owl:ObjectProperty ;
-                                                               rdfs:subPropertyOf <http://vivoweb.org/ontology/core#dateTimeValue> ;
-                                                               <http://purl.obolibrary.org/obo/IAO_0000115> "The date in which a Justificacion has to be delivered."@en-us ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               rdfs:label "foreseen justification date"@en-us ,
-                                                                          "vorgesehenes Begründungsdatum"@de-de .
-
-
-###  http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000019
-<http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000019> rdf:type owl:ObjectProperty ;
-                                                               owl:inverseOf <http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000024> ;
-                                                               rdf:type owl:FunctionalProperty ;
-                                                               <http://purl.obolibrary.org/obo/IAO_0000115> "Diese Objekteigenschaft wird verwendet, um die Lizenz (vivo:License) einer bestimmten Instanz anzugeben."@de-de ,
-                                                                                                            "This object property is used to specify the licence (vivo:License) of a given instance."@en-us ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               rdfs:label "has license"@en-us ,
-                                                                          "hat Lizenz"@de-de .
-
-
-###  http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000020
-<http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000020> rdf:type owl:ObjectProperty ;
-                                                               owl:inverseOf <http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000023> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               rdfs:label "has predecessor"@en-us ,
-                                                                          "hat Vorgänger"@de-de .
-
-
-###  http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000021
-<http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000021> rdf:type owl:ObjectProperty ;
-                                                               owl:inverseOf <http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000029> ;
-                                                               <http://purl.obolibrary.org/obo/IAO_0000115> "A Project is categorized by different Project Classifications."@en-us ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               rdfs:label "has project categorization"@en-us ,
-                                                                          "hat Projektkategorisierung"@de-de .
-
-
-###  http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000022
-<http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000022> rdf:type owl:ObjectProperty ;
-                                                               owl:inverseOf <http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000034> ;
-                                                               <http://purl.obolibrary.org/obo/IAO_0000115> "An Agent has a Role in a Relation."@en-us ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               rdfs:label "has role"@en-us ,
-                                                                          "hat rolle"@de-de .
-
-
-###  http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000023
-<http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000023> rdf:type owl:ObjectProperty ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               rdfs:label "has successor"@en-us ,
-                                                                          "hat Nachfolger"@de-de .
-
-
-###  http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000024
-<http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000024> rdf:type owl:ObjectProperty ,
-                                                                        owl:InverseFunctionalProperty ;
-                                                               <http://purl.obolibrary.org/obo/IAO_0000115> "Diese Objekteigenschaft wird verwendet, um Instanzen durch eine bestimmte Lizenz (vivo:License) zu lizenzieren."@de-de ,
-                                                                                                            "This object property is used to which instances are licensed by a given license (vivo:License)."@en-us ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               rdfs:label "licenses"@en-us ,
-                                                                          "lienziert"@de-de .
-
-
-###  http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000025
-<http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000025> rdf:type owl:ObjectProperty ;
-                                                               rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000050> ,
-                                                                                  <http://w3id.org/roh#partOfRepository> ;
-                                                               owl:inverseOf <http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000031> ;
-                                                               <http://purl.obolibrary.org/obo/IAO_0000115> "A core relation that holds between a part and its whole, that in this case is a Repository."@en-us ,
-                                                                                                            "Eine Kernbeziehung, die zwischen einem Teil und seinem Ganzen besteht, das in diesem Fall ein Repository ist."@de-de ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               rdfs:label "part of repository"@en-us ,
-                                                                          "teil des Repository."@de-de .
-
-
-###  http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000026
-<http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000026> rdf:type owl:ObjectProperty ;
-                                                               rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000050> ;
-                                                               owl:inverseOf <http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000033> ;
-                                                               <http://purl.obolibrary.org/obo/IAO_0000115> "A core relation that holds between a part and its hole, that in this case is a Research."@en-us ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               rdfs:label "part of research result"@en-us ,
-                                                                          "teil eines Forschungsergebnisses"@de-de .
-
-
-###  http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000027
-<http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000027> rdf:type owl:ObjectProperty ;
-                                                               owl:inverseOf <http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000028> ;
-                                                               <http://purl.obolibrary.org/obo/IAO_0000115> "Some entity producing some Thing."@en-us ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               rdfs:label "erzeugt von"@de-de ,
-                                                                          "produced by"@en-us .
-
-
-###  http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000028
-<http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000028> rdf:type owl:ObjectProperty ;
-                                                               <http://purl.obolibrary.org/obo/IAO_0000115> "Some Thing producing some entity."@en-us ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               rdfs:label "erzeugt"@de-de ,
-                                                                          "produces"@en-us .
-
-
-###  http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000029
-<http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000029> rdf:type owl:ObjectProperty ;
-                                                               <http://purl.obolibrary.org/obo/IAO_0000115> "A Project Classification which categorizes a Project."@en-us ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               rdfs:label "Projektkategorisierung von"@de-de ,
-                                                                          "project categorization of"@en-us .
-
-
-###  http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000030
-<http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000030> rdf:type owl:ObjectProperty ;
-                                                               <http://purl.obolibrary.org/obo/IAO_0000115> "A project may be in a CLOSED, OPEN or in other future status that may be defined." ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               rdfs:label "Projekt-Status"@de-de ,
-                                                                          "project status"@en-us .
-
-
-###  http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000031
-<http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000031> rdf:type owl:ObjectProperty ;
-                                                               rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000051> ,
-                                                                                  <http://w3id.org/roh#repositoryHasPart> ;
-                                                               <http://purl.obolibrary.org/obo/IAO_0000115> "A core relation that holds between a whole, that in this case is an Repository, and its part ."@en-us ,
-                                                                                                            "Eine Kernbeziehung, die zwischen einem Ganzen, in diesem Fall einem Repository, und seinem Teil besteht"@de-de ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               rdfs:label "Repository hat Teil"@es ,
-                                                                          "repository has part"@en-us .
-
-
-###  http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000032
-<http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000032> rdf:type owl:ObjectProperty ;
-                                                               rdfs:subPropertyOf <http://w3id.org/roh#repositoryStatus> ;
-                                                               <http://purl.obolibrary.org/obo/IAO_0000115> "The status of a Repository (Closed or Open)."@en-us ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               rdfs:label "estado del repositorio"@es ,
-                                                                          "repository status"@en-us .
-
-
-###  http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000033
-<http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000033> rdf:type owl:ObjectProperty ;
-                                                               rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000051> ,
-                                                                                  <http://w3id.org/roh#researchResultHasPart> ;
-                                                               <http://purl.obolibrary.org/obo/IAO_0000115> "A core relation that holds between a whole, that in this case is an Research Object, and its part ."@en-us ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               rdfs:label "Forschungsergebnis hat als Teil"@de-de ,
-                                                                          "research result has part"@en-us .
-
-
-###  http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000034
-<http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000034> rdf:type owl:ObjectProperty ;
-                                                               <http://purl.obolibrary.org/obo/IAO_0000115> "The Role held by an Agent in a Relationship."@en-us ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               rdfs:label "role of"@en-us ,
-                                                                          "rolle von"@de-de .
-
-
-###  http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000035
-<http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000035> rdf:type owl:ObjectProperty ;
-                                                               rdfs:subPropertyOf <http://w3id.org/roh#seqOfAuthors> ;
-                                                               <http://purl.obolibrary.org/obo/IAO_0000115> "An unordered list of authors."@en-us ,
-                                                                                                            "Eine ungeordnete Liste von Autoren."@de-de ;
-                                                               rdfs:label "Autorenliste"@de-de ,
-                                                                          "seq of authors"@en-us .
-
-
-###  http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000042
-<http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000042> rdf:type owl:ObjectProperty ;
-                                                               rdfs:subPropertyOf <http://w3id.org/roh#knowledgeAreaOf> ;
-                                                               owl:inverseOf <http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000043> ;
-                                                               <http://purl.obolibrary.org/obo/IAO_0000115> "A skos:Concept which is the knowledge area of some entity"@en-us ,
-                                                                                                            "Ein skos:Konzept, das den Wissensbereich einer Entität darstellt"@de-de ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               rdfs:label "Wissensbereich der"@de-de ,
-                                                                          "knowledge area of"@en-us .
-
-
-###  http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000043
-<http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000043> rdf:type owl:ObjectProperty ;
-                                                               rdfs:subPropertyOf <http://w3id.org/roh#hasKnowledgeArea> ;
-                                                               <http://purl.obolibrary.org/obo/IAO_0000115> "Eine Entität, die sich auf ein Konzept bezieht"@de-de ,
-                                                                                                            "Some entity related to a Concept"@en-us ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               rdfs:label "has knowledge area"@en-us ,
-                                                                          "hat Wissensbereich"@de-de .
-
-
 ###  http://vivoweb.org/ontology/core#dateTimeInterval
 <http://vivoweb.org/ontology/core#dateTimeInterval> rdf:type owl:ObjectProperty .
 
@@ -409,67 +140,336 @@ owl:maxCardinality rdf:type owl:AnnotationProperty .
 <http://vivoweb.org/ontology/core#dateTimeValue> rdf:type owl:ObjectProperty .
 
 
-###  http://vivoweb.org/ontology/core#projectIn
-<http://vivoweb.org/ontology/core#projectIn> rdf:type owl:ObjectProperty .
-
-
 ###  http://vivoweb.org/ontology/core#relates
 <http://vivoweb.org/ontology/core#relates> rdf:type owl:ObjectProperty .
 
 
-###  http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000045
-<http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000045> rdf:type owl:ObjectProperty ;
-                                                               rdfs:subPropertyOf <http://w3id.org/roh#addresses> ;
-                                                               owl:inverseOf <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000046> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               rdfs:label "addresses"@en-us ,
-                                                                          "adressiert"@de-de .
+###  http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000014
+<http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000014> rdf:type owl:ObjectProperty ;
+                                                                                   rdfs:subPropertyOf <http://w3id.org/roh#correspondingAuthor> ;
+                                                                                   owl:inverseOf <http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000015> ;
+                                                                                   <http://purl.obolibrary.org/obo/IAO_0000115> "An object property linking an Entity to a Person, considered the author of such Thing."@en-us ,
+                                                                                                                                "Eine Objekteigenschaft, die eine Entität mit einer Person verbindet, die als Urheber dieser Sache gilt"@de-de ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   rdfs:label "corresponding author"@en-us ,
+                                                                                              "entsprechender Autor"@de-de .
 
 
-###  http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000046
-<http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000046> rdf:type owl:ObjectProperty ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               rdfs:label "addressed by"@en-us ,
-                                                                          "adressiert von"@de-de .
+###  http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000015
+<http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000015> rdf:type owl:ObjectProperty ;
+                                                                                   rdfs:subPropertyOf <http://w3id.org/roh#correspondingAuthorOf> ;
+                                                                                   <http://purl.obolibrary.org/obo/IAO_0000115> "An object property linking a Person with a Thing, such person is corresponding author for."@en-us ,
+                                                                                                                                "Eine Objekteigenschaft, die eine Person mit einer Sache verknüpft, diese Person ist der entsprechende Autor für"@de-de ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   rdfs:label "corresponding author of"@en-us ,
+                                                                                              "entsprechender Autor von"@de-de .
 
 
-###  http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000048
-<http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000048> rdf:type owl:ObjectProperty ;
-                                                               rdfs:subPropertyOf <http://w3id.org/roh#employs> ;
-                                                               owl:inverseOf <http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000049> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               rdfs:label "Anwendet"@de-de ,
-                                                                          "Employs"@en-us .
+###  http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000016
+<http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000016> rdf:type owl:ObjectProperty ;
+                                                                                   rdfs:subPropertyOf <http://w3id.org/roh#correspondingOrganization> ;
+                                                                                   owl:inverseOf <http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000017> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   rdfs:label "corresponding Organization"@en-us ,
+                                                                                              "entsprechende Organisation"@de-de .
 
 
-###  http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000049
-<http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000049> rdf:type owl:ObjectProperty ;
-                                                               owl:inverseOf <http://w3id.org/roh#employs> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               rdfs:label "Anwendet in"@de-de ,
-                                                                          "Employed in"@en-us .
+###  http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000017
+<http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000017> rdf:type owl:ObjectProperty ;
+                                                                                   rdfs:subPropertyOf <http://w3id.org/roh#correspondingOrganizationOf> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   rdfs:label "corresponding Organization Of"@en-us ,
+                                                                                              "entsprechende Organisation der"@de-de .
 
 
-###  http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000056
-<http://vivoweb.org/ontology/core/VIVOPROJECTONTOLOGY_0000056> rdf:type owl:ObjectProperty ;
-                                                               rdfs:subPropertyOf <http://purl.org/ontology/bibo/authorList> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#offerCreateNewOptionAnnot> "true"^^xsd:boolean ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-                                                               <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#selectFromExistingAnnot> "true"^^xsd:boolean ;
-                                                               rdfs:comment "An ordered list of authors. Normally, this list is seen as a priority list that order authors by importance"@en-us ,
-                                                                            "Eine geordnete Autorenliste. Normalerweise wird diese Liste als Prioritätenliste angesehen, die die Autoren nach Wichtigkeit sortiert"@de-de ;
-                                                               rdfs:label "Author list"@en-us ,
-                                                                          "Autorenliste"@de-de .
+###  http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000018
+<http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000018> rdf:type owl:ObjectProperty ;
+                                                                                   rdfs:subPropertyOf <http://vivoweb.org/ontology/core#dateTimeValue> ;
+                                                                                   <http://purl.obolibrary.org/obo/IAO_0000115> "The date in which a Justificacion has to be delivered."@en-us ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   rdfs:label "foreseen justification date"@en-us ,
+                                                                                              "vorgesehenes Begründungsdatum"@de-de .
+
+
+###  http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000019
+<http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000019> rdf:type owl:ObjectProperty ;
+                                                                                   owl:inverseOf <http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000024> ;
+                                                                                   rdf:type owl:FunctionalProperty ;
+                                                                                   <http://purl.obolibrary.org/obo/IAO_0000115> "Diese Objekteigenschaft wird verwendet, um die Lizenz (vivo:License) einer bestimmten Instanz anzugeben."@de-de ,
+                                                                                                                                "This object property is used to specify the licence (vivo:License) of a given instance."@en-us ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   rdfs:label "has license"@en-us ,
+                                                                                              "hat Lizenz"@de-de .
+
+
+###  http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000020
+<http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000020> rdf:type owl:ObjectProperty ;
+                                                                                   owl:inverseOf <http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000023> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   rdfs:label "has predecessor"@en-us ,
+                                                                                              "hat Vorgänger"@de-de .
+
+
+###  http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000021
+<http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000021> rdf:type owl:ObjectProperty ;
+                                                                                   owl:inverseOf <http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000029> ;
+                                                                                   <http://purl.obolibrary.org/obo/IAO_0000115> "A Project is categorized by different Project Classifications."@en-us ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   rdfs:label "has project categorization"@en-us ,
+                                                                                              "hat Projektkategorisierung"@de-de .
+
+
+###  http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000022
+<http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000022> rdf:type owl:ObjectProperty ;
+                                                                                   owl:inverseOf <http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000034> ;
+                                                                                   <http://purl.obolibrary.org/obo/IAO_0000115> "An Agent has a Role in a Relation."@en-us ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   rdfs:label "has role"@en-us ,
+                                                                                              "hat rolle"@de-de .
+
+
+###  http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000023
+<http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000023> rdf:type owl:ObjectProperty ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   rdfs:label "has successor"@en-us ,
+                                                                                              "hat Nachfolger"@de-de .
+
+
+###  http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000024
+<http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000024> rdf:type owl:ObjectProperty ,
+                                                                                            owl:InverseFunctionalProperty ;
+                                                                                   <http://purl.obolibrary.org/obo/IAO_0000115> "Diese Objekteigenschaft wird verwendet, um Instanzen durch eine bestimmte Lizenz (vivo:License) zu lizenzieren."@de-de ,
+                                                                                                                                "This object property is used to which instances are licensed by a given license (vivo:License)."@en-us ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   rdfs:label "licenses"@en-us ,
+                                                                                              "lienziert"@de-de .
+
+
+###  http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000025
+<http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000025> rdf:type owl:ObjectProperty ;
+                                                                                   rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000050> ,
+                                                                                                      <http://w3id.org/roh#partOfRepository> ;
+                                                                                   owl:inverseOf <http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000031> ;
+                                                                                   <http://purl.obolibrary.org/obo/IAO_0000115> "A core relation that holds between a part and its whole, that in this case is a Repository."@en-us ,
+                                                                                                                                "Eine Kernbeziehung, die zwischen einem Teil und seinem Ganzen besteht, das in diesem Fall ein Repository ist."@de-de ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   rdfs:label "part of repository"@en-us ,
+                                                                                              "teil des Repository."@de-de .
+
+
+###  http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000026
+<http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000026> rdf:type owl:ObjectProperty ;
+                                                                                   rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000050> ;
+                                                                                   owl:inverseOf <http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000033> ;
+                                                                                   <http://purl.obolibrary.org/obo/IAO_0000115> "A core relation that holds between a part and its hole, that in this case is a Research."@en-us ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   rdfs:label "part of research result"@en-us ,
+                                                                                              "teil eines Forschungsergebnisses"@de-de .
+
+
+###  http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000027
+<http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000027> rdf:type owl:ObjectProperty ;
+                                                                                   owl:inverseOf <http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000028> ;
+                                                                                   <http://purl.obolibrary.org/obo/IAO_0000115> "Some entity producing some Thing."@en-us ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   rdfs:label "erzeugt von"@de-de ,
+                                                                                              "produced by"@en-us .
+
+
+###  http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000028
+<http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000028> rdf:type owl:ObjectProperty ;
+                                                                                   <http://purl.obolibrary.org/obo/IAO_0000115> "Some Thing producing some entity."@en-us ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   rdfs:label "erzeugt"@de-de ,
+                                                                                              "produces"@en-us .
+
+
+###  http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000029
+<http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000029> rdf:type owl:ObjectProperty ;
+                                                                                   <http://purl.obolibrary.org/obo/IAO_0000115> "A Project Classification which categorizes a Project."@en-us ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   rdfs:label "Projektkategorisierung von"@de-de ,
+                                                                                              "project categorization of"@en-us .
+
+
+###  http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000030
+<http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000030> rdf:type owl:ObjectProperty ;
+                                                                                   <http://purl.obolibrary.org/obo/IAO_0000115> "A project may be in a CLOSED, OPEN or in other future status that may be defined." ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   rdfs:label "Projekt-Status"@de-de ,
+                                                                                              "project status"@en-us .
+
+
+###  http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000031
+<http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000031> rdf:type owl:ObjectProperty ;
+                                                                                   rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000051> ,
+                                                                                                      <http://w3id.org/roh#repositoryHasPart> ;
+                                                                                   <http://purl.obolibrary.org/obo/IAO_0000115> "A core relation that holds between a whole, that in this case is an Repository, and its part ."@en-us ,
+                                                                                                                                "Eine Kernbeziehung, die zwischen einem Ganzen, in diesem Fall einem Repository, und seinem Teil besteht"@de-de ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   rdfs:label "Repository hat Teil"@es ,
+                                                                                              "repository has part"@en-us .
+
+
+###  http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000032
+<http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000032> rdf:type owl:ObjectProperty ;
+                                                                                   rdfs:subPropertyOf <http://w3id.org/roh#repositoryStatus> ;
+                                                                                   <http://purl.obolibrary.org/obo/IAO_0000115> "The status of a Repository (Closed or Open)."@en-us ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   rdfs:label "estado del repositorio"@es ,
+                                                                                              "repository status"@en-us .
+
+
+###  http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000033
+<http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000033> rdf:type owl:ObjectProperty ;
+                                                                                   rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000051> ,
+                                                                                                      <http://w3id.org/roh#researchResultHasPart> ;
+                                                                                   <http://purl.obolibrary.org/obo/IAO_0000115> "A core relation that holds between a whole, that in this case is an Research Object, and its part ."@en-us ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   rdfs:label "Forschungsergebnis hat als Teil"@de-de ,
+                                                                                              "research result has part"@en-us .
+
+
+###  http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000034
+<http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000034> rdf:type owl:ObjectProperty ;
+                                                                                   <http://purl.obolibrary.org/obo/IAO_0000115> "The Role held by an Agent in a Relationship."@en-us ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   rdfs:label "role of"@en-us ,
+                                                                                              "rolle von"@de-de .
+
+
+###  http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000035
+<http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000035> rdf:type owl:ObjectProperty ;
+                                                                                   rdfs:subPropertyOf <http://w3id.org/roh#seqOfAuthors> ;
+                                                                                   <http://purl.obolibrary.org/obo/IAO_0000115> "An unordered list of authors."@en-us ,
+                                                                                                                                "Eine ungeordnete Liste von Autoren."@de-de ;
+                                                                                   rdfs:label "Autorenliste"@de-de ,
+                                                                                              "seq of authors"@en-us .
+
+
+###  http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000042
+<http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000042> rdf:type owl:ObjectProperty ;
+                                                                                   rdfs:subPropertyOf <http://w3id.org/roh#knowledgeAreaOf> ;
+                                                                                   owl:inverseOf <http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000043> ;
+                                                                                   <http://purl.obolibrary.org/obo/IAO_0000115> "A skos:Concept which is the knowledge area of some entity"@en-us ,
+                                                                                                                                "Ein skos:Konzept, das den Wissensbereich einer Entität darstellt"@de-de ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   rdfs:label "Wissensbereich der"@de-de ,
+                                                                                              "knowledge area of"@en-us .
+
+
+###  http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000043
+<http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000043> rdf:type owl:ObjectProperty ;
+                                                                                   rdfs:subPropertyOf <http://w3id.org/roh#hasKnowledgeArea> ;
+                                                                                   <http://purl.obolibrary.org/obo/IAO_0000115> "Eine Entität, die sich auf ein Konzept bezieht"@de-de ,
+                                                                                                                                "Some entity related to a Concept"@en-us ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   rdfs:label "has knowledge area"@en-us ,
+                                                                                              "hat Wissensbereich"@de-de .
+
+
+###  http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000045
+<http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000045> rdf:type owl:ObjectProperty ;
+                                                                                   rdfs:subPropertyOf <http://w3id.org/roh#addresses> ;
+                                                                                   owl:inverseOf <http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000046> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   rdfs:label "addresses"@en-us ,
+                                                                                              "adressiert"@de-de .
+
+
+###  http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000046
+<http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000046> rdf:type owl:ObjectProperty ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   rdfs:label "addressed by"@en-us ,
+                                                                                              "adressiert von"@de-de .
+
+
+###  http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000048
+<http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000048> rdf:type owl:ObjectProperty ;
+                                                                                   rdfs:subPropertyOf <http://w3id.org/roh#employs> ;
+                                                                                   owl:inverseOf <http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000049> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   rdfs:label "Anwendet"@de-de ,
+                                                                                              "Employs"@en-us .
+
+
+###  http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000049
+<http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000049> rdf:type owl:ObjectProperty ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   rdfs:label "Anwendet in"@de-de ,
+                                                                                              "Employed in"@en-us .
+
+
+###  http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000056
+<http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000056> rdf:type owl:ObjectProperty ;
+                                                                                   rdfs:subPropertyOf <http://purl.org/ontology/bibo/authorList> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromDisplayBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#hiddenFromPublishBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#offerCreateNewOptionAnnot> "true"^^xsd:boolean ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#prohibitedFromUpdateBelowRoleLevelAnnot> <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+                                                                                   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#selectFromExistingAnnot> "true"^^xsd:boolean ;
+                                                                                   rdfs:comment "An ordered list of authors. Normally, this list is seen as a priority list that order authors by importance"@en-us ,
+                                                                                                "Eine geordnete Autorenliste. Normalerweise wird diese Liste als Prioritätenliste angesehen, die die Autoren nach Wichtigkeit sortiert"@de-de ;
+                                                                                   rdfs:label "Author list"@en-us ,
+                                                                                              "Autorenliste"@de-de .
+
+
+###  http://vivoweb.org/ontology/core/vivoprojectontology#projectIn
+<http://vivoweb.org/ontology/core/vivoprojectontology#projectIn> rdf:type owl:ObjectProperty .
 
 
 ###  http://w3id.org/roh#addresses

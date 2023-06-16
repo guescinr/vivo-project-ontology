@@ -1,0 +1,21 @@
+@prefix vivo-project: <http://vivoweb.org/ontology/core/vivoprojectontology#> .
+@prefix projects: <http://projects/> .
+@prefix vivo: <http://vivoweb.org/ontology/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+projects:project1 a vivo-project:VIVOPROJECTONTOLOGY_0000000, owl:NamedIndividual ;
+rdfs:label "BUA-VIVO für Forschungsinformation"@de-de,"BUA-VIVO for Research information"@en-us;
+vivo-project:VIVOPROJECTONTOLOGY_0000036 "BUAVIVO" ;
+vivo-project:description "Bisher finden sich Informationen zu Wissenschaftlerinnen und Wissenschaftlern sowie zu ihrer Forschung und ihren Aktivitäten an den Berliner Universitäten zumeist verstreut und ohne eine übergreifende Orientierungsmöglichkeit. Ein gemeinsamer Katalog, der die bestehenden Angebote der Hochschulen und die Informationen des Web integriert, ermöglicht Transparenz und erleichtert die Netzwerkbildung mit Nachbardisziplinen deutlich. Zusätzlich kann eine solche virtuelle Anlauf- und Informationsstelle die Wissenschaftskommunikation und den Wissenstransfer deutlich fördern."@de-de, "So far, information about researchers and their research and activities at Berlin's universities is mostly scattered and lacks a comprehensive orientation option. A common catalog that integrates the existing offerings of the universities and the information available on the Web would enable transparency and make networking across disciplines easier. In addition, such a virtual contact and information point can improve the science communication and the transfer of knowledge. This project requires an administration and analysis platform in order to coordinate master data management and to establish a federated, user-oriented research information platform, which at the same time provides a single view of the participating institutions."@en-us ;
+vivo-project:VIVOPROJECTONTOLOGY_0000037 "Das VIVO-Projekt zielt darauf ab, eine Plattform für die Recherche, Sammlung und Darstellung von Wissenschaftlerinnen und Wissenschaftlern und ihrer Forschung sowie ihren Aktivitäten im Rahmen der BUA aufzubauen."@de-de, "The VIVO project aims at building a platform for research, collecting and presenting researchers and their research and activities within the BUA."@en-us ;
+vivo-project:VIVOPROJECTONTOLOGY_0000038 "VIVO: aufzeichnen, suchen und visualisieren wissenschaftlicher Aktivitäten"@de-de, "VIVO: track, search, and visualize scientific activities"@en-us ;
+vivo-project:VIVOPROJECTONTOLOGY_0000018 projects:foreseenjsutificationdate ;
+vivo-project:freetextKeyword "vivo, linked data, research infromation" .
+
+projects:foreseenjsutificationdate a vivo:dateTimeValue  ;
+		vivo:dateTime "2023-01-05T14:50:00"^^xsd:datetime ;
+		vivo:dateTimePrecision vivo:yearMonthDayTimePrecision .
