@@ -11,7 +11,7 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:vitro="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#">
     <owl:Ontology rdf:about="http://vivoweb.org/ontology/core/vivoprojectontology/vivoprojectontology/vivoprojectontology-simple.owl">
-        <owl:versionIRI rdf:resource="http://vivoweb.org/ontology/core/vivoprojectontology/vivoprojectontology/releases/2023-06-16/vivoprojectontology-simple.owl"/>
+        <owl:versionIRI rdf:resource="http://vivoweb.org/ontology/core/vivoprojectontology/vivoprojectontology/releases/2023-09-08/vivoprojectontology-simple.owl"/>
         <terms:creator>Rolf Guescini</terms:creator>
         <terms:description xml:lang="de-de">Diese Ontologie beschreibt die Projektentität und ihre Eigenschaften und Beschränkungen für die Verwendung in der VIVO-Anwendung</terms:description>
         <terms:description xml:lang="en-us">This ontology describes the project entity and its properties and restraints for use in the VIVO application</terms:description>
@@ -21,7 +21,7 @@
         <vitro:ontologyPrefixAnnot>vivo-project</vitro:ontologyPrefixAnnot>
         <rdfs:label xml:lang="en-us">VIVO Project Ontology</rdfs:label>
         <rdfs:label xml:lang="de-de">VIVO Projektontologie</rdfs:label>
-        <owl:versionInfo>2023-06-16</owl:versionInfo>
+        <owl:versionInfo>2023-09-08</owl:versionInfo>
     </owl:Ontology>
     
 

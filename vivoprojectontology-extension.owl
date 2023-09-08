@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://vivoweb.org/ontology/core/vivoprojectontology.owl#"
-     xml:base="http://vivoweb.org/ontology/core/vivoprojectontology.owl"
+<rdf:RDF xmlns="http://vivoweb.org/ontology/core/vivoprojectontology#"
+     xml:base="http://vivoweb.org/ontology/core/vivoprojectontology#"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -21,6 +21,7 @@
         <vitro:ontologyPrefixAnnot>vivo-project</vitro:ontologyPrefixAnnot>
         <rdfs:label xml:lang="en-us">VIVO Project Ontology</rdfs:label>
         <rdfs:label xml:lang="de-de">VIVO Projektontologie</rdfs:label>
+        <vitro:ontologyPrefixAnnot xml:lang="de-de">vivo-project</vitro:ontologyPrefixAnnot >
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-05-23</owl:versionInfo>
     </owl:Ontology>
     
@@ -197,7 +198,7 @@
 
     <!-- http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000004 -->
 
-    <owl:NamedIndividual rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000004">
+    <owl:NamedIndividual rdf:about="http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000004">
         <rdf:type rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000013"/>
         <owl:topDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"></owl:topDataProperty>
         <rdfs:label xml:lang="de-de">Ausstehend</rdfs:label>
@@ -208,7 +209,7 @@
 
     <!-- http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000005 -->
 
-    <owl:NamedIndividual rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000005">
+    <owl:NamedIndividual rdf:about="http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000005">
         <rdf:type rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000013"/>
         <owl:topDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"></owl:topDataProperty>
         <rdfs:label xml:lang="de-de">Abgeschlossen</rdfs:label>
@@ -219,7 +220,7 @@
 
     <!-- http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000007 -->
 
-    <owl:NamedIndividual rdf:about="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000007">
+    <owl:NamedIndividual rdf:about="http://vivoweb.org/ontology/vivoprojectontology#core#VIVOPROJECTONTOLOGY_0000007">
         <rdf:type rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000013"/>
         <owl:topDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"></owl:topDataProperty>
         <rdfs:label xml:lang="de-de">Antrag eingereicht</rdfs:label>
@@ -230,7 +231,7 @@
 
     <!-- http://vivoweb.org/ontology/core/vivoprojectontology.owl#VIVOPROJECTONTOLOGY_0000059 -->
 
-    <owl:NamedIndividual rdf:about="http://vivoweb.org/ontology/core/vivoprojectontology.owl#VIVOPROJECTONTOLOGY_0000059">
+    <owl:NamedIndividual rdf:about="http://vivoweb.org/ontology/core/vivoprojectontology#VIVOPROJECTONTOLOGY_0000059">
         <rdf:type rdf:resource="http://vivoweb.org/ontology/core#VIVOPROJECTONTOLOGY_0000013"/>
         <owl:topDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"></owl:topDataProperty>
         <rdfs:label xml:lang="de-de">Abgelehnt</rdfs:label>

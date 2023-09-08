@@ -16,6 +16,6 @@ vivo-project:VIVOPROJECTONTOLOGY_0000038 "VIVO: aufzeichnen, suchen und visualis
 vivo-project:VIVOPROJECTONTOLOGY_0000018 projects:foreseenjsutificationdate ;
 vivo-project:freetextKeyword "vivo, linked data, research infromation" .
 
-projects:foreseenjsutificationdate a vivo:dateTimeValue  ;
+projects:foreseenjsutificationdate a vivo:DateTimeValue  ;
 		vivo:dateTime "2023-01-05T14:50:00"^^xsd:datetime ;
 		vivo:dateTimePrecision vivo:yearMonthDayTimePrecision .

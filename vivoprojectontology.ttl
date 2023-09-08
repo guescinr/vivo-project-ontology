@@ -18,7 +18,7 @@
 @base <http://vivoweb.org/ontology/core/vivoprojectontology/> .
 
 <http://vivoweb.org/ontology/core/vivoprojectontology/> rdf:type owl:Ontology ;
-                                                         owl:versionIRI <http://vivoweb.org/ontology/core/vivoprojectontology/vivoprojectontology/releases/2023-06-16/vivoprojectontology.ttl> ;
+                                                         owl:versionIRI <http://vivoweb.org/ontology/core/vivoprojectontology/vivoprojectontology/releases/2023-09-08/vivoprojectontology.ttl> ;
                                                          dcterms:creator "Rolf Guescini" ;
                                                          dcterms:description "Diese Ontologie beschreibt die Projektentität und ihre Eigenschaften und Beschränkungen für die Verwendung in der VIVO-Anwendung"@de-de ,
                                                                              "This ontology describes the project entity and its properties and restraints for use in the VIVO application"@en-us ;
@@ -28,7 +28,7 @@
                                                          vitro:ontologyPrefixAnnot "vivo-project" ;
                                                          rdfs:label "VIVO Project Ontology"@en-us ,
                                                                     "VIVO Projektontologie"@de-de ;
-                                                         owl:versionInfo "2023-06-16" .
+                                                         owl:versionInfo "2023-09-08" .
 
 #################################################################
 #    Annotation properties
